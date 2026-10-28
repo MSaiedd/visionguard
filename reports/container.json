@@ -12,5 +12,6 @@
     "non-root user",
     "review persisted across restart",
     "deleted image inaccessible"
-  ]
+  ],
+  "disposable_image_removed_after_check": true
 }

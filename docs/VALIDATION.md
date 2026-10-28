@@ -87,3 +87,19 @@ in that target environment. The model missed 27 official test defects; it must n
 heatmap PNG, UID 1000, review persistence across container restart, and deletion visibility. The recorded
 model was surface-v1-bf19df23, sample anomaly score 7.7677. Reports/container.json identifies the image.
 This does not establish public deployment, load capacity or live recovery.
+
+## GitHub CI and clean install
+
+[Actions run 40610424344](https://github.com/MSaiedd/visionguard/actions/runs/40610424344) — all five jobs
+passed against source commit 53c84689236a1b29ab9f3078cc2f98aa9d03c133: Python 3.11, Python 3.12,
+frontend, PostgreSQL and browser. Python 3.12 includes the real numerical tests; core-only 3.11 skips
+the optional torch-dependent tests.
+
+`python scripts/download_release.py` — tested against the public v0.1.0 asset from an empty temporary
+working directory. The embedded SHA-256 matched, safe extraction succeeded, and the installed ONNX
+model initialized with version surface-v1-bf19df23 without importing torch. This checks distribution
+and loadability; the complete inference/accuracy checks are recorded above.
+
+Disposable Docker verification containers, images and only this project's build caches were removed
+after validation to recover root-filesystem space. The running local app, source, dataset and fitted
+artifact remain on the separate home partition.

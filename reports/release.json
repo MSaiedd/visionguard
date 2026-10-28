@@ -5,5 +5,9 @@
   "reference_license": "CC BY-NC-SA 4.0",
   "source_url": "https://www.vicos.si/resources/kolektorsdd2/",
   "model_version": "surface-v1-bf19df23",
-  "runtime": "ONNX Runtime CPU"
+  "runtime": "ONNX Runtime CPU",
+  "public_download_checked": true,
+  "checksum_verified": true,
+  "clean_install_initialized": true,
+  "torch_imported_during_serving": false
 }
