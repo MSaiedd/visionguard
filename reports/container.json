@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "image_id": "sha256:ad0ba07cefec581c7aaa033012c639f300bacaf6fd0e9e5acb693de7bd15b8dc",
+  "uid": 1000,
+  "real_model_version": "surface-v1-bf19df23",
+  "real_score": 7.7677,
+  "inference_ms": 18.49,
+  "checks": [
+    "built frontend",
+    "actual CPU model inference",
+    "heatmap PNG",
+    "non-root user",
+    "review persisted across restart",
+    "deleted image inaccessible"
+  ]
+}

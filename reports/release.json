@@ -1,0 +1,9 @@
+{
+  "asset": "visionguard-surface-v1.zip",
+  "sha256": "93d4331a46aff6f711003ae8a1b5fe28ec1b69443e1fc0945f84c0cdb04d4195",
+  "bytes": 26054844,
+  "reference_license": "CC BY-NC-SA 4.0",
+  "source_url": "https://www.vicos.si/resources/kolektorsdd2/",
+  "model_version": "surface-v1-bf19df23",
+  "runtime": "ONNX Runtime CPU"
+}

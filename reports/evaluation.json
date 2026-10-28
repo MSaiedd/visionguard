@@ -1,0 +1,6615 @@
+{
+  "schema_version": 1,
+  "model": {
+    "schema_version": 1,
+    "version": "surface-v1-bf19df23",
+    "method": "PaDiM-style patch Gaussian",
+    "backbone": "ResNet18 IMAGENET1K_V1",
+    "feature_layers": [
+      "layer1",
+      "layer2",
+      "layer3"
+    ],
+    "dimensions": 48,
+    "input_size": [
+      320,
+      128
+    ],
+    "image_threshold": 5.146759510040283,
+    "pixel_threshold": 5.313362121582031,
+    "heatmap_low": 2.499789237976074,
+    "heatmap_high": 6.0862579345703125,
+    "weights_sha256": "c7675b76a9facde93c15c4df3da3f0d0c510ee37b4dd0a26d09711bca4225add",
+    "license": "CC BY-NC-SA 4.0 reference-data terms; research/portfolio use",
+    "dataset": "KolektorSDD2",
+    "fitted_normal_images": 1000,
+    "score_definition": "99.5th percentile of smoothed patch Mahalanobis distances; not a probability",
+    "training_checkpoint_sha256": "c7675b76a9facde93c15c4df3da3f0d0c510ee37b4dd0a26d09711bca4225add",
+    "encoder_sha256": "3c3fe37ec56d81e2d6b9e3e5d987fd575107d45c2c1e23642480a2f4c323b484",
+    "reference_sha256": "673957f581e0b9adad1216f21e19d62fb684da25c1b33774e07f028e18693e86",
+    "runtime": "ONNX Runtime CPU"
+  },
+  "seed": 42,
+  "train_images": 1865,
+  "fitted_normal_images": 1000,
+  "validation": {
+    "images": 466,
+    "positive_images": 49,
+    "auroc": 0.9312876229628542,
+    "average_precision": 0.7660468440123618,
+    "precision": 0.7804878048780488,
+    "recall": 0.6530612244897959,
+    "f1": 0.711111111111111,
+    "confusion": {
+      "true_negative": 408,
+      "false_positive": 9,
+      "false_negative": 17,
+      "true_positive": 32
+    }
+  },
+  "test": {
+    "images": 1004,
+    "positive_images": 110,
+    "auroc": 0.9379601382957089,
+    "average_precision": 0.8127316126176395,
+    "precision": 0.7477477477477478,
+    "recall": 0.7545454545454545,
+    "f1": 0.751131221719457,
+    "confusion": {
+      "true_negative": 866,
+      "false_positive": 28,
+      "false_negative": 27,
+      "true_positive": 83
+    }
+  },
+  "pixel_test_auroc": 0.9729731001487225,
+  "pixel_test_average_precision": 0.38988166562380755,
+  "pixel_evaluation": "Fixed stride 4 on resized 320\u00d7128 mask; not full-resolution benchmark",
+  "latency_ms": {
+    "mean": 21.099465120522407,
+    "p95": 21.70902562511401,
+    "batch_size": 8,
+    "includes": "batched encoder and score map, excludes disk IO/API"
+  },
+  "elapsed_seconds": 66.30715370699909,
+  "normal_training_ids": [
+    "train/12150.png",
+    "train/11636.png",
+    "train/10009.png",
+    "train/10610.png",
+    "train/10221.png",
+    "train/10953.png",
+    "train/11331.png",
+    "train/12100.png",
+    "train/10278.png",
+    "train/10917.png",
+    "train/10167.png",
+    "train/10161.png",
+    "train/11416.png",
+    "train/11130.png",
+    "train/12235.png",
+    "train/12309.png",
+    "train/11900.png",
+    "train/10128.png",
+    "train/10773.png",
+    "train/10360.png",
+    "train/10941.png",
+    "train/11903.png",
+    "train/10329.png",
+    "train/11347.png",
+    "train/12010.png",
+    "train/11366.png",
+    "train/11471.png",
+    "train/12149.png",
+    "train/11809.png",
+    "train/10172.png",
+    "train/11016.png",
+    "train/10171.png",
+    "train/10078.png",
+    "train/10970.png",
+    "train/10444.png",
+    "train/10668.png",
+    "train/10548.png",
+    "train/11697.png",
+    "train/10524.png",
+    "train/10940.png",
+    "train/11761.png",
+    "train/10876.png",
+    "train/12264.png",
+    "train/11289.png",
+    "train/10027.png",
+    "train/12004.png",
+    "train/11675.png",
+    "train/11680.png",
+    "train/11932.png",
+    "train/10058.png",
+    "train/10268.png",
+    "train/12168.png",
+    "train/11692.png",
+    "train/11264.png",
+    "train/10558.png",
+    "train/10237.png",
+    "train/11732.png",
+    "train/10603.png",
+    "train/10572.png",
+    "train/12116.png",
+    "train/11119.png",
+    "train/10280.png",
+    "train/10641.png",
+    "train/11677.png",
+    "train/11108.png",
+    "train/11639.png",
+    "train/10427.png",
+    "train/11577.png",
+    "train/10615.png",
+    "train/10413.png",
+    "train/12036.png",
+    "train/10005.png",
+    "train/11251.png",
+    "train/12230.png",
+    "train/10732.png",
+    "train/11936.png",
+    "train/10720.png",
+    "train/11296.png",
+    "train/11083.png",
+    "train/11278.png",
+    "train/11965.png",
+    "train/11559.png",
+    "train/11674.png",
+    "train/10118.png",
+    "train/10762.png",
+    "train/12034.png",
+    "train/12134.png",
+    "train/10581.png",
+    "train/11833.png",
+    "train/11657.png",
+    "train/10766.png",
+    "train/10042.png",
+    "train/12208.png",
+    "train/10790.png",
+    "train/10126.png",
+    "train/10696.png",
+    "train/10886.png",
+    "train/11208.png",
+    "train/12225.png",
+    "train/10504.png",
+    "train/10923.png",
+    "train/10180.png",
+    "train/10127.png",
+    "train/12048.png",
+    "train/12019.png",
+    "train/12058.png",
+    "train/10062.png",
+    "train/12302.png",
+    "train/12271.png",
+    "train/11942.png",
+    "train/12032.png",
+    "train/11666.png",
+    "train/12211.png",
+    "train/10362.png",
+    "train/11434.png",
+    "train/10512.png",
+    "train/11614.png",
+    "train/11707.png",
+    "train/10270.png",
+    "train/11166.png",
+    "train/11588.png",
+    "train/10897.png",
+    "train/10545.png",
+    "train/10510.png",
+    "train/11528.png",
+    "train/12035.png",
+    "train/10918.png",
+    "train/10792.png",
+    "train/11128.png",
+    "train/10865.png",
+    "train/10819.png",
+    "train/11971.png",
+    "train/10553.png",
+    "train/11496.png",
+    "train/10088.png",
+    "train/12076.png",
+    "train/12310.png",
+    "train/10680.png",
+    "train/11109.png",
+    "train/10255.png",
+    "train/11541.png",
+    "train/10356.png",
+    "train/11879.png",
+    "train/10074.png",
+    "train/11057.png",
+    "train/10517.png",
+    "train/11561.png",
+    "train/11298.png",
+    "train/11448.png",
+    "train/11118.png",
+    "train/11602.png",
+    "train/10877.png",
+    "train/11984.png",
+    "train/11419.png",
+    "train/11376.png",
+    "train/11001.png",
+    "train/12166.png",
+    "train/10406.png",
+    "train/10523.png",
+    "train/10986.png",
+    "train/10776.png",
+    "train/10687.png",
+    "train/12083.png",
+    "train/11654.png",
+    "train/11036.png",
+    "train/10225.png",
+    "train/10937.png",
+    "train/11212.png",
+    "train/11051.png",
+    "train/11063.png",
+    "train/12200.png",
+    "train/12072.png",
+    "train/10428.png",
+    "train/12043.png",
+    "train/10913.png",
+    "train/12165.png",
+    "train/11859.png",
+    "train/10507.png",
+    "train/12115.png",
+    "train/10626.png",
+    "train/10031.png",
+    "train/12291.png",
+    "train/12020.png",
+    "train/12227.png",
+    "train/10112.png",
+    "train/12232.png",
+    "train/11688.png",
+    "train/10331.png",
+    "train/11114.png",
+    "train/10482.png",
+    "train/10240.png",
+    "train/11607.png",
+    "train/11488.png",
+    "train/12229.png",
+    "train/11367.png",
+    "train/11515.png",
+    "train/10903.png",
+    "train/11120.png",
+    "train/11441.png",
+    "train/11090.png",
+    "train/10810.png",
+    "train/11835.png",
+    "train/11572.png",
+    "train/10772.png",
+    "train/10399.png",
+    "train/11343.png",
+    "train/11046.png",
+    "train/10590.png",
+    "train/11938.png",
+    "train/10818.png",
+    "train/10202.png",
+    "train/11776.png",
+    "train/11738.png",
+    "train/12089.png",
+    "train/11013.png",
+    "train/11113.png",
+    "train/11999.png",
+    "train/10555.png",
+    "train/10022.png",
+    "train/11533.png",
+    "train/10238.png",
+    "train/11263.png",
+    "train/10761.png",
+    "train/12033.png",
+    "train/10139.png",
+    "train/12283.png",
+    "train/11200.png",
+    "train/11431.png",
+    "train/11518.png",
+    "train/11586.png",
+    "train/11021.png",
+    "train/10634.png",
+    "train/11673.png",
+    "train/10168.png",
+    "train/11241.png",
+    "train/11377.png",
+    "train/10395.png",
+    "train/11904.png",
+    "train/10540.png",
+    "train/10593.png",
+    "train/12062.png",
+    "train/11733.png",
+    "train/10368.png",
+    "train/11201.png",
+    "train/10035.png",
+    "train/10556.png",
+    "train/10522.png",
+    "train/10895.png",
+    "train/10261.png",
+    "train/12167.png",
+    "train/11341.png",
+    "train/11011.png",
+    "train/10483.png",
+    "train/10822.png",
+    "train/11609.png",
+    "train/10283.png",
+    "train/10381.png",
+    "train/10920.png",
+    "train/10496.png",
+    "train/12187.png",
+    "train/10008.png",
+    "train/11484.png",
+    "train/11157.png",
+    "train/11259.png",
+    "train/11930.png",
+    "train/10529.png",
+    "train/12278.png",
+    "train/11645.png",
+    "train/11846.png",
+    "train/10560.png",
+    "train/11044.png",
+    "train/11816.png",
+    "train/11332.png",
+    "train/10855.png",
+    "train/11041.png",
+    "train/10216.png",
+    "train/11685.png",
+    "train/11324.png",
+    "train/10136.png",
+    "train/10043.png",
+    "train/11218.png",
+    "train/11982.png",
+    "train/11817.png",
+    "train/10219.png",
+    "train/10891.png",
+    "train/11395.png",
+    "train/11260.png",
+    "train/10501.png",
+    "train/10439.png",
+    "train/10080.png",
+    "train/11312.png",
+    "train/12031.png",
+    "train/11375.png",
+    "train/11369.png",
+    "train/12016.png",
+    "train/10936.png",
+    "train/12184.png",
+    "train/11292.png",
+    "train/11037.png",
+    "train/11320.png",
+    "train/11469.png",
+    "train/11060.png",
+    "train/10141.png",
+    "train/11440.png",
+    "train/11771.png",
+    "train/12330.png",
+    "train/11231.png",
+    "train/10342.png",
+    "train/11684.png",
+    "train/12018.png",
+    "train/11679.png",
+    "train/10740.png",
+    "train/10282.png",
+    "train/11839.png",
+    "train/11281.png",
+    "train/12046.png",
+    "train/11624.png",
+    "train/10089.png",
+    "train/10914.png",
+    "train/10807.png",
+    "train/11829.png",
+    "train/11486.png",
+    "train/10346.png",
+    "train/11748.png",
+    "train/11391.png",
+    "train/12234.png",
+    "train/11188.png",
+    "train/12297.png",
+    "train/12258.png",
+    "train/10925.png",
+    "train/10977.png",
+    "train/11283.png",
+    "train/10040.png",
+    "train/11334.png",
+    "train/10144.png",
+    "train/10667.png",
+    "train/10533.png",
+    "train/11918.png",
+    "train/10675.png",
+    "train/11389.png",
+    "train/10325.png",
+    "train/11869.png",
+    "train/11767.png",
+    "train/10250.png",
+    "train/11861.png",
+    "train/10963.png",
+    "train/11066.png",
+    "train/11318.png",
+    "train/11987.png",
+    "train/11537.png",
+    "train/11111.png",
+    "train/10935.png",
+    "train/10082.png",
+    "train/11229.png",
+    "train/12158.png",
+    "train/11735.png",
+    "train/10800.png",
+    "train/12177.png",
+    "train/10527.png",
+    "train/11222.png",
+    "train/11308.png",
+    "train/11411.png",
+    "train/11667.png",
+    "train/10147.png",
+    "train/10972.png",
+    "train/10048.png",
+    "train/10758.png",
+    "train/10075.png",
+    "train/11556.png",
+    "train/10535.png",
+    "train/11691.png",
+    "train/11472.png",
+    "train/10110.png",
+    "train/11655.png",
+    "train/11566.png",
+    "train/10681.png",
+    "train/10245.png",
+    "train/11244.png",
+    "train/10538.png",
+    "train/10739.png",
+    "train/10939.png",
+    "train/10998.png",
+    "train/11326.png",
+    "train/12197.png",
+    "train/12175.png",
+    "train/10087.png",
+    "train/10525.png",
+    "train/11878.png",
+    "train/10411.png",
+    "train/11596.png",
+    "train/10298.png",
+    "train/10734.png",
+    "train/11361.png",
+    "train/12092.png",
+    "train/10550.png",
+    "train/10064.png",
+    "train/10445.png",
+    "train/10719.png",
+    "train/12238.png",
+    "train/11026.png",
+    "train/11110.png",
+    "train/11340.png",
+    "train/10765.png",
+    "train/12023.png",
+    "train/12079.png",
+    "train/10662.png",
+    "train/10125.png",
+    "train/10754.png",
+    "train/10143.png",
+    "train/11409.png",
+    "train/10813.png",
+    "train/12259.png",
+    "train/10565.png",
+    "train/10551.png",
+    "train/12189.png",
+    "train/11992.png",
+    "train/10735.png",
+    "train/10431.png",
+    "train/10032.png",
+    "train/10532.png",
+    "train/11901.png",
+    "train/10493.png",
+    "train/11131.png",
+    "train/11721.png",
+    "train/11788.png",
+    "train/10965.png",
+    "train/10883.png",
+    "train/11501.png",
+    "train/11794.png",
+    "train/11397.png",
+    "train/11382.png",
+    "train/10189.png",
+    "train/10717.png",
+    "train/10686.png",
+    "train/12140.png",
+    "train/11727.png",
+    "train/11095.png",
+    "train/11424.png",
+    "train/11224.png",
+    "train/11793.png",
+    "train/11105.png",
+    "train/11000.png",
+    "train/11723.png",
+    "train/12156.png",
+    "train/10316.png",
+    "train/10163.png",
+    "train/12171.png",
+    "train/11916.png",
+    "train/12325.png",
+    "train/10721.png",
+    "train/10417.png",
+    "train/10229.png",
+    "train/11960.png",
+    "train/12132.png",
+    "train/10106.png",
+    "train/11555.png",
+    "train/10730.png",
+    "train/11182.png",
+    "train/10322.png",
+    "train/12013.png",
+    "train/11885.png",
+    "train/11358.png",
+    "train/10974.png",
+    "train/10318.png",
+    "train/12103.png",
+    "train/11991.png",
+    "train/11154.png",
+    "train/11115.png",
+    "train/10954.png",
+    "train/11216.png",
+    "train/11807.png",
+    "train/11029.png",
+    "train/12203.png",
+    "train/10798.png",
+    "train/11875.png",
+    "train/10788.png",
+    "train/11249.png",
+    "train/12198.png",
+    "train/11551.png",
+    "train/10115.png",
+    "train/12040.png",
+    "train/12107.png",
+    "train/10561.png",
+    "train/11267.png",
+    "train/10831.png",
+    "train/12099.png",
+    "train/10731.png",
+    "train/10160.png",
+    "train/10099.png",
+    "train/10288.png",
+    "train/11550.png",
+    "train/11478.png",
+    "train/11795.png",
+    "train/10036.png",
+    "train/10728.png",
+    "train/10211.png",
+    "train/12093.png",
+    "train/10815.png",
+    "train/10640.png",
+    "train/10191.png",
+    "train/11279.png",
+    "train/11712.png",
+    "train/10303.png",
+    "train/11421.png",
+    "train/11802.png",
+    "train/12011.png",
+    "train/11270.png",
+    "train/11717.png",
+    "train/11542.png",
+    "train/11167.png",
+    "train/11635.png",
+    "train/10119.png",
+    "train/11534.png",
+    "train/11009.png",
+    "train/10324.png",
+    "train/11921.png",
+    "train/10044.png",
+    "train/12269.png",
+    "train/10452.png",
+    "train/11015.png",
+    "train/10471.png",
+    "train/11380.png",
+    "train/12286.png",
+    "train/10486.png",
+    "train/12113.png",
+    "train/12007.png",
+    "train/10987.png",
+    "train/11491.png",
+    "train/10577.png",
+    "train/10184.png",
+    "train/10016.png",
+    "train/11608.png",
+    "train/11246.png",
+    "train/10622.png",
+    "train/11086.png",
+    "train/10475.png",
+    "train/11742.png",
+    "train/11891.png",
+    "train/10875.png",
+    "train/11243.png",
+    "train/12202.png",
+    "train/12296.png",
+    "train/10543.png",
+    "train/11136.png",
+    "train/11508.png",
+    "train/10056.png",
+    "train/10578.png",
+    "train/12084.png",
+    "train/10789.png",
+    "train/11906.png",
+    "train/12193.png",
+    "train/10460.png",
+    "train/12173.png",
+    "train/10539.png",
+    "train/11896.png",
+    "train/10495.png",
+    "train/11462.png",
+    "train/11615.png",
+    "train/12322.png",
+    "train/11539.png",
+    "train/11261.png",
+    "train/12247.png",
+    "train/10975.png",
+    "train/10985.png",
+    "train/11591.png",
+    "train/10724.png",
+    "train/11050.png",
+    "train/10584.png",
+    "train/11189.png",
+    "train/10093.png",
+    "train/11843.png",
+    "train/10725.png",
+    "train/11181.png",
+    "train/11587.png",
+    "train/11806.png",
+    "train/10816.png",
+    "train/10650.png",
+    "train/11144.png",
+    "train/10676.png",
+    "train/10690.png",
+    "train/10588.png",
+    "train/10378.png",
+    "train/11837.png",
+    "train/10979.png",
+    "train/12228.png",
+    "train/10199.png",
+    "train/11888.png",
+    "train/11423.png",
+    "train/11453.png",
+    "train/11499.png",
+    "train/11152.png",
+    "train/10575.png",
+    "train/10988.png",
+    "train/11076.png",
+    "train/10780.png",
+    "train/11467.png",
+    "train/10205.png",
+    "train/11065.png",
+    "train/11772.png",
+    "train/11865.png",
+    "train/10693.png",
+    "train/11780.png",
+    "train/10409.png",
+    "train/10169.png",
+    "train/11493.png",
+    "train/12030.png",
+    "train/10271.png",
+    "train/11048.png",
+    "train/12164.png",
+    "train/12183.png",
+    "train/11974.png",
+    "train/11503.png",
+    "train/10252.png",
+    "train/11234.png",
+    "train/11464.png",
+    "train/11479.png",
+    "train/10767.png",
+    "train/12073.png",
+    "train/10733.png",
+    "train/10570.png",
+    "train/12037.png",
+    "train/10465.png",
+    "train/12217.png",
+    "train/11855.png",
+    "train/11617.png",
+    "train/11413.png",
+    "train/10046.png",
+    "train/11127.png",
+    "train/11043.png",
+    "train/10994.png",
+    "train/12002.png",
+    "train/10579.png",
+    "train/12220.png",
+    "train/11847.png",
+    "train/10137.png",
+    "train/10456.png",
+    "train/10481.png",
+    "train/11579.png",
+    "train/11582.png",
+    "train/10909.png",
+    "train/10919.png",
+    "train/11042.png",
+    "train/11634.png",
+    "train/10825.png",
+    "train/10241.png",
+    "train/11405.png",
+    "train/10624.png",
+    "train/10738.png",
+    "train/12250.png",
+    "train/10234.png",
+    "train/11374.png",
+    "train/11247.png",
+    "train/11765.png",
+    "train/10026.png",
+    "train/12082.png",
+    "train/11319.png",
+    "train/12090.png",
+    "train/12222.png",
+    "train/11516.png",
+    "train/10351.png",
+    "train/10859.png",
+    "train/11227.png",
+    "train/10611.png",
+    "train/11461.png",
+    "train/10841.png",
+    "train/10108.png",
+    "train/11647.png",
+    "train/12136.png",
+    "train/11876.png",
+    "train/10716.png",
+    "train/10377.png",
+    "train/10568.png",
+    "train/11031.png",
+    "train/10669.png",
+    "train/11977.png",
+    "train/11598.png",
+    "train/11953.png",
+    "train/11006.png",
+    "train/10838.png",
+    "train/10438.png",
+    "train/10217.png",
+    "train/11252.png",
+    "train/11720.png",
+    "train/11979.png",
+    "train/10371.png",
+    "train/11709.png",
+    "train/11268.png",
+    "train/10313.png",
+    "train/11758.png",
+    "train/12098.png",
+    "train/11889.png",
+    "train/10264.png",
+    "train/11275.png",
+    "train/11092.png",
+    "train/11455.png",
+    "train/11191.png",
+    "train/10323.png",
+    "train/10094.png",
+    "train/11284.png",
+    "train/11087.png",
+    "train/10410.png",
+    "train/10321.png",
+    "train/10041.png",
+    "train/10415.png",
+    "train/12061.png",
+    "train/10836.png",
+    "train/10981.png",
+    "train/11311.png",
+    "train/11818.png",
+    "train/10002.png",
+    "train/10991.png",
+    "train/10102.png",
+    "train/10781.png",
+    "train/10231.png",
+    "train/11838.png",
+    "train/10203.png",
+    "train/11744.png",
+    "train/11605.png",
+    "train/11970.png",
+    "train/11415.png",
+    "train/10896.png",
+    "train/11766.png",
+    "train/10129.png",
+    "train/11510.png",
+    "train/12306.png",
+    "train/11547.png",
+    "train/10802.png",
+    "train/11523.png",
+    "train/10608.png",
+    "train/10829.png",
+    "train/10422.png",
+    "train/10625.png",
+    "train/11220.png",
+    "train/11621.png",
+    "train/10742.png",
+    "train/10314.png",
+    "train/11597.png",
+    "train/11452.png",
+    "train/11336.png",
+    "train/10589.png",
+    "train/11653.png",
+    "train/10154.png",
+    "train/10348.png",
+    "train/11400.png",
+    "train/10434.png",
+    "train/10794.png",
+    "train/10190.png",
+    "train/10193.png",
+    "train/12295.png",
+    "train/11751.png",
+    "train/12153.png",
+    "train/10812.png",
+    "train/10101.png",
+    "train/10702.png",
+    "train/10566.png",
+    "train/10086.png",
+    "train/11854.png",
+    "train/11495.png",
+    "train/11396.png",
+    "train/10069.png",
+    "train/10248.png",
+    "train/11463.png",
+    "train/12190.png",
+    "train/12038.png",
+    "train/11489.png",
+    "train/10400.png",
+    "train/11937.png",
+    "train/11266.png",
+    "train/10134.png",
+    "train/11156.png",
+    "train/11403.png",
+    "train/10915.png",
+    "train/12118.png",
+    "train/11789.png",
+    "train/10416.png",
+    "train/11913.png",
+    "train/12069.png",
+    "train/10061.png",
+    "train/10379.png",
+    "train/11355.png",
+    "train/12282.png",
+    "train/11946.png",
+    "train/11989.png",
+    "train/10430.png",
+    "train/10239.png",
+    "train/10519.png",
+    "train/10315.png",
+    "train/11716.png",
+    "train/11954.png",
+    "train/11521.png",
+    "train/10397.png",
+    "train/12145.png",
+    "train/10746.png",
+    "train/12207.png",
+    "train/10830.png",
+    "train/12122.png",
+    "train/11611.png",
+    "train/11238.png",
+    "train/11719.png",
+    "train/11995.png",
+    "train/10257.png",
+    "train/11774.png",
+    "train/10982.png",
+    "train/11073.png",
+    "train/12159.png",
+    "train/11049.png",
+    "train/10155.png",
+    "train/11782.png",
+    "train/10259.png",
+    "train/11024.png",
+    "train/12205.png",
+    "train/11968.png",
+    "train/12029.png",
+    "train/11143.png",
+    "train/10376.png",
+    "train/10642.png",
+    "train/11868.png",
+    "train/11525.png",
+    "train/11439.png",
+    "train/12324.png",
+    "train/11053.png",
+    "train/12151.png",
+    "train/10494.png",
+    "train/11638.png",
+    "train/11737.png",
+    "train/11745.png",
+    "train/11338.png",
+    "train/10817.png",
+    "train/10946.png",
+    "train/12075.png",
+    "train/11427.png",
+    "train/10984.png",
+    "train/10571.png",
+    "train/10300.png",
+    "train/11544.png",
+    "train/10123.png",
+    "train/10020.png",
+    "train/11117.png",
+    "train/10633.png",
+    "train/10701.png",
+    "train/11008.png",
+    "train/10924.png",
+    "train/11976.png",
+    "train/12241.png",
+    "train/10334.png",
+    "train/11583.png",
+    "train/10784.png",
+    "train/11787.png",
+    "train/11749.png",
+    "train/11022.png",
+    "train/12003.png",
+    "train/10113.png",
+    "train/10256.png",
+    "train/10736.png",
+    "train/10011.png",
+    "train/12206.png",
+    "train/10385.png",
+    "train/10995.png",
+    "train/10839.png",
+    "train/10390.png",
+    "train/10489.png",
+    "train/10361.png",
+    "train/11663.png",
+    "train/10509.png",
+    "train/12065.png",
+    "train/12133.png",
+    "train/11422.png",
+    "train/11694.png",
+    "train/11502.png",
+    "train/10037.png",
+    "train/10484.png",
+    "train/11406.png",
+    "train/10956.png",
+    "train/10872.png",
+    "train/12064.png",
+    "train/10664.png",
+    "train/11059.png",
+    "train/10341.png",
+    "train/10639.png",
+    "train/12137.png",
+    "train/12243.png",
+    "train/12144.png",
+    "train/10343.png",
+    "train/11213.png",
+    "train/11731.png",
+    "train/10373.png",
+    "train/11304.png",
+    "train/11035.png",
+    "train/11165.png",
+    "train/10617.png",
+    "train/12169.png",
+    "train/10692.png",
+    "train/11091.png",
+    "train/10763.png",
+    "train/11140.png",
+    "train/10880.png",
+    "train/10375.png",
+    "train/10931.png",
+    "train/11640.png",
+    "train/11038.png",
+    "train/10236.png",
+    "train/11871.png",
+    "train/11357.png",
+    "train/11701.png",
+    "train/10655.png",
+    "train/11536.png",
+    "train/10911.png",
+    "train/10521.png",
+    "train/10614.png",
+    "train/10138.png",
+    "train/11777.png",
+    "train/11159.png",
+    "train/11994.png",
+    "train/11210.png",
+    "train/11457.png",
+    "train/10490.png",
+    "train/12045.png",
+    "train/10722.png",
+    "train/11378.png",
+    "train/10530.png",
+    "train/11877.png",
+    "train/12289.png",
+    "train/10755.png",
+    "train/10497.png",
+    "train/10054.png",
+    "train/11107.png",
+    "train/10799.png",
+    "train/11122.png",
+    "train/10156.png",
+    "train/11726.png",
+    "train/11811.png",
+    "train/10976.png",
+    "train/12088.png",
+    "train/11480.png",
+    "train/11089.png",
+    "train/10989.png",
+    "train/11741.png",
+    "train/11519.png",
+    "train/11603.png",
+    "train/11179.png",
+    "train/11633.png",
+    "train/10833.png",
+    "train/10103.png",
+    "train/10265.png",
+    "train/11706.png",
+    "train/10562.png",
+    "train/10537.png",
+    "train/12181.png",
+    "train/10968.png",
+    "train/10811.png",
+    "train/10443.png",
+    "train/10033.png",
+    "train/12214.png",
+    "train/11941.png",
+    "train/11760.png",
+    "train/12085.png",
+    "train/11155.png",
+    "train/11511.png",
+    "train/11368.png",
+    "train/12252.png",
+    "train/12054.png",
+    "train/10862.png",
+    "train/10861.png",
+    "train/11428.png",
+    "train/10528.png",
+    "train/11081.png",
+    "train/12027.png",
+    "train/12127.png",
+    "train/12209.png",
+    "train/11931.png",
+    "train/11346.png",
+    "train/11757.png",
+    "train/11902.png",
+    "train/10957.png",
+    "train/11696.png",
+    "train/10164.png",
+    "train/10332.png",
+    "train/10197.png",
+    "train/10890.png",
+    "train/10024.png",
+    "train/12285.png",
+    "train/11796.png",
+    "train/10347.png",
+    "train/11505.png",
+    "train/10039.png",
+    "train/11064.png",
+    "train/10052.png",
+    "train/10933.png",
+    "train/11365.png",
+    "train/12025.png",
+    "train/10091.png",
+    "train/10929.png",
+    "train/11753.png",
+    "train/10503.png",
+    "train/11401.png",
+    "train/10070.png",
+    "train/12174.png",
+    "train/11058.png",
+    "train/11725.png",
+    "train/11548.png"
+  ],
+  "validation_ids": [
+    "train/10010.png",
+    "train/10017.png",
+    "train/10018.png",
+    "train/10021.png",
+    "train/10025.png",
+    "train/10028.png",
+    "train/10029.png",
+    "train/10034.png",
+    "train/10045.png",
+    "train/10049.png",
+    "train/10053.png",
+    "train/10057.png",
+    "train/10059.png",
+    "train/10067.png",
+    "train/10076.png",
+    "train/10081.png",
+    "train/10092.png",
+    "train/10095.png",
+    "train/10097.png",
+    "train/10098.png",
+    "train/10100.png",
+    "train/10116.png",
+    "train/10122.png",
+    "train/10130.png",
+    "train/10142.png",
+    "train/10148.png",
+    "train/10173.png",
+    "train/10182.png",
+    "train/10185.png",
+    "train/10194.png",
+    "train/10195.png",
+    "train/10196.png",
+    "train/10198.png",
+    "train/10201.png",
+    "train/10212.png",
+    "train/10213.png",
+    "train/10215.png",
+    "train/10218.png",
+    "train/10224.png",
+    "train/10226.png",
+    "train/10228.png",
+    "train/10230.png",
+    "train/10232.png",
+    "train/10243.png",
+    "train/10246.png",
+    "train/10275.png",
+    "train/10276.png",
+    "train/10277.png",
+    "train/10281.png",
+    "train/10289.png",
+    "train/10290.png",
+    "train/10291.png",
+    "train/10294.png",
+    "train/10297.png",
+    "train/10299.png",
+    "train/10302.png",
+    "train/10305.png",
+    "train/10306.png",
+    "train/10310.png",
+    "train/10319.png",
+    "train/10326.png",
+    "train/10327.png",
+    "train/10328.png",
+    "train/10330.png",
+    "train/10336.png",
+    "train/10340.png",
+    "train/10350.png",
+    "train/10365.png",
+    "train/10380.png",
+    "train/10384.png",
+    "train/10389.png",
+    "train/10391.png",
+    "train/10392.png",
+    "train/10394.png",
+    "train/10398.png",
+    "train/10401.png",
+    "train/10403.png",
+    "train/10405.png",
+    "train/10407.png",
+    "train/10408.png",
+    "train/10412.png",
+    "train/10425.png",
+    "train/10432.png",
+    "train/10433.png",
+    "train/10435.png",
+    "train/10447.png",
+    "train/10448.png",
+    "train/10449.png",
+    "train/10450.png",
+    "train/10457.png",
+    "train/10458.png",
+    "train/10459.png",
+    "train/10461.png",
+    "train/10463.png",
+    "train/10464.png",
+    "train/10466.png",
+    "train/10472.png",
+    "train/10476.png",
+    "train/10477.png",
+    "train/10479.png",
+    "train/10491.png",
+    "train/10500.png",
+    "train/10502.png",
+    "train/10513.png",
+    "train/10516.png",
+    "train/10518.png",
+    "train/10520.png",
+    "train/10534.png",
+    "train/10544.png",
+    "train/10554.png",
+    "train/10580.png",
+    "train/10583.png",
+    "train/10586.png",
+    "train/10587.png",
+    "train/10591.png",
+    "train/10592.png",
+    "train/10595.png",
+    "train/10599.png",
+    "train/10601.png",
+    "train/10613.png",
+    "train/10627.png",
+    "train/10631.png",
+    "train/10636.png",
+    "train/10643.png",
+    "train/10645.png",
+    "train/10646.png",
+    "train/10652.png",
+    "train/10660.png",
+    "train/10661.png",
+    "train/10665.png",
+    "train/10670.png",
+    "train/10671.png",
+    "train/10677.png",
+    "train/10688.png",
+    "train/10691.png",
+    "train/10698.png",
+    "train/10709.png",
+    "train/10723.png",
+    "train/10745.png",
+    "train/10749.png",
+    "train/10756.png",
+    "train/10759.png",
+    "train/10770.png",
+    "train/10775.png",
+    "train/10779.png",
+    "train/10791.png",
+    "train/10793.png",
+    "train/10795.png",
+    "train/10804.png",
+    "train/10820.png",
+    "train/10823.png",
+    "train/10824.png",
+    "train/10827.png",
+    "train/10835.png",
+    "train/10837.png",
+    "train/10842.png",
+    "train/10843.png",
+    "train/10850.png",
+    "train/10851.png",
+    "train/10854.png",
+    "train/10856.png",
+    "train/10857.png",
+    "train/10858.png",
+    "train/10864.png",
+    "train/10866.png",
+    "train/10867.png",
+    "train/10868.png",
+    "train/10870.png",
+    "train/10871.png",
+    "train/10879.png",
+    "train/10881.png",
+    "train/10884.png",
+    "train/10888.png",
+    "train/10889.png",
+    "train/10892.png",
+    "train/10900.png",
+    "train/10902.png",
+    "train/10906.png",
+    "train/10912.png",
+    "train/10922.png",
+    "train/10926.png",
+    "train/10930.png",
+    "train/10932.png",
+    "train/10942.png",
+    "train/10948.png",
+    "train/10949.png",
+    "train/10950.png",
+    "train/10961.png",
+    "train/10964.png",
+    "train/10967.png",
+    "train/10973.png",
+    "train/10993.png",
+    "train/10999.png",
+    "train/11002.png",
+    "train/11010.png",
+    "train/11012.png",
+    "train/11017.png",
+    "train/11019.png",
+    "train/11020.png",
+    "train/11023.png",
+    "train/11039.png",
+    "train/11055.png",
+    "train/11072.png",
+    "train/11077.png",
+    "train/11079.png",
+    "train/11084.png",
+    "train/11098.png",
+    "train/11099.png",
+    "train/11103.png",
+    "train/11104.png",
+    "train/11106.png",
+    "train/11121.png",
+    "train/11125.png",
+    "train/11132.png",
+    "train/11133.png",
+    "train/11135.png",
+    "train/11137.png",
+    "train/11142.png",
+    "train/11146.png",
+    "train/11147.png",
+    "train/11149.png",
+    "train/11160.png",
+    "train/11163.png",
+    "train/11164.png",
+    "train/11168.png",
+    "train/11169.png",
+    "train/11170.png",
+    "train/11171.png",
+    "train/11173.png",
+    "train/11174.png",
+    "train/11176.png",
+    "train/11177.png",
+    "train/11178.png",
+    "train/11183.png",
+    "train/11184.png",
+    "train/11186.png",
+    "train/11187.png",
+    "train/11196.png",
+    "train/11197.png",
+    "train/11199.png",
+    "train/11203.png",
+    "train/11206.png",
+    "train/11209.png",
+    "train/11221.png",
+    "train/11230.png",
+    "train/11232.png",
+    "train/11236.png",
+    "train/11253.png",
+    "train/11258.png",
+    "train/11262.png",
+    "train/11273.png",
+    "train/11274.png",
+    "train/11276.png",
+    "train/11286.png",
+    "train/11288.png",
+    "train/11294.png",
+    "train/11295.png",
+    "train/11303.png",
+    "train/11306.png",
+    "train/11307.png",
+    "train/11309.png",
+    "train/11310.png",
+    "train/11314.png",
+    "train/11315.png",
+    "train/11317.png",
+    "train/11322.png",
+    "train/11327.png",
+    "train/11333.png",
+    "train/11335.png",
+    "train/11339.png",
+    "train/11342.png",
+    "train/11352.png",
+    "train/11353.png",
+    "train/11359.png",
+    "train/11362.png",
+    "train/11371.png",
+    "train/11372.png",
+    "train/11373.png",
+    "train/11379.png",
+    "train/11384.png",
+    "train/11390.png",
+    "train/11392.png",
+    "train/11399.png",
+    "train/11402.png",
+    "train/11407.png",
+    "train/11408.png",
+    "train/11414.png",
+    "train/11417.png",
+    "train/11420.png",
+    "train/11426.png",
+    "train/11435.png",
+    "train/11437.png",
+    "train/11438.png",
+    "train/11447.png",
+    "train/11456.png",
+    "train/11458.png",
+    "train/11470.png",
+    "train/11475.png",
+    "train/11476.png",
+    "train/11481.png",
+    "train/11485.png",
+    "train/11494.png",
+    "train/11497.png",
+    "train/11498.png",
+    "train/11507.png",
+    "train/11524.png",
+    "train/11554.png",
+    "train/11557.png",
+    "train/11562.png",
+    "train/11570.png",
+    "train/11573.png",
+    "train/11575.png",
+    "train/11576.png",
+    "train/11581.png",
+    "train/11593.png",
+    "train/11594.png",
+    "train/11600.png",
+    "train/11604.png",
+    "train/11613.png",
+    "train/11618.png",
+    "train/11620.png",
+    "train/11622.png",
+    "train/11623.png",
+    "train/11626.png",
+    "train/11627.png",
+    "train/11637.png",
+    "train/11650.png",
+    "train/11652.png",
+    "train/11656.png",
+    "train/11659.png",
+    "train/11660.png",
+    "train/11661.png",
+    "train/11665.png",
+    "train/11676.png",
+    "train/11678.png",
+    "train/11686.png",
+    "train/11689.png",
+    "train/11693.png",
+    "train/11700.png",
+    "train/11705.png",
+    "train/11708.png",
+    "train/11711.png",
+    "train/11729.png",
+    "train/11743.png",
+    "train/11747.png",
+    "train/11750.png",
+    "train/11754.png",
+    "train/11756.png",
+    "train/11759.png",
+    "train/11769.png",
+    "train/11770.png",
+    "train/11773.png",
+    "train/11778.png",
+    "train/11779.png",
+    "train/11781.png",
+    "train/11783.png",
+    "train/11784.png",
+    "train/11797.png",
+    "train/11799.png",
+    "train/11803.png",
+    "train/11814.png",
+    "train/11825.png",
+    "train/11827.png",
+    "train/11828.png",
+    "train/11831.png",
+    "train/11841.png",
+    "train/11842.png",
+    "train/11849.png",
+    "train/11850.png",
+    "train/11852.png",
+    "train/11853.png",
+    "train/11856.png",
+    "train/11867.png",
+    "train/11882.png",
+    "train/11893.png",
+    "train/11895.png",
+    "train/11905.png",
+    "train/11910.png",
+    "train/11911.png",
+    "train/11912.png",
+    "train/11919.png",
+    "train/11922.png",
+    "train/11926.png",
+    "train/11933.png",
+    "train/11939.png",
+    "train/11945.png",
+    "train/11947.png",
+    "train/11948.png",
+    "train/11950.png",
+    "train/11951.png",
+    "train/11952.png",
+    "train/11955.png",
+    "train/11956.png",
+    "train/11962.png",
+    "train/11963.png",
+    "train/11964.png",
+    "train/11978.png",
+    "train/11993.png",
+    "train/11996.png",
+    "train/11997.png",
+    "train/12022.png",
+    "train/12041.png",
+    "train/12051.png",
+    "train/12052.png",
+    "train/12059.png",
+    "train/12060.png",
+    "train/12066.png",
+    "train/12074.png",
+    "train/12087.png",
+    "train/12096.png",
+    "train/12101.png",
+    "train/12104.png",
+    "train/12106.png",
+    "train/12109.png",
+    "train/12111.png",
+    "train/12123.png",
+    "train/12128.png",
+    "train/12129.png",
+    "train/12139.png",
+    "train/12142.png",
+    "train/12143.png",
+    "train/12148.png",
+    "train/12152.png",
+    "train/12157.png",
+    "train/12162.png",
+    "train/12163.png",
+    "train/12176.png",
+    "train/12179.png",
+    "train/12182.png",
+    "train/12185.png",
+    "train/12186.png",
+    "train/12192.png",
+    "train/12204.png",
+    "train/12210.png",
+    "train/12212.png",
+    "train/12213.png",
+    "train/12215.png",
+    "train/12218.png",
+    "train/12221.png",
+    "train/12223.png",
+    "train/12226.png",
+    "train/12231.png",
+    "train/12245.png",
+    "train/12248.png",
+    "train/12249.png",
+    "train/12251.png",
+    "train/12256.png",
+    "train/12260.png",
+    "train/12262.png",
+    "train/12263.png",
+    "train/12268.png",
+    "train/12270.png",
+    "train/12273.png",
+    "train/12275.png",
+    "train/12276.png",
+    "train/12279.png",
+    "train/12281.png",
+    "train/12293.png",
+    "train/12298.png",
+    "train/12299.png",
+    "train/12304.png",
+    "train/12311.png",
+    "train/12313.png",
+    "train/12315.png",
+    "train/12326.png",
+    "train/12328.png"
+  ],
+  "test_predictions": [
+    {
+      "id": "test/20000.png",
+      "label": 0,
+      "score": 3.990192174911499
+    },
+    {
+      "id": "test/20001.png",
+      "label": 0,
+      "score": 4.129951000213623
+    },
+    {
+      "id": "test/20002.png",
+      "label": 0,
+      "score": 5.03853702545166
+    },
+    {
+      "id": "test/20003.png",
+      "label": 0,
+      "score": 3.550006866455078
+    },
+    {
+      "id": "test/20004.png",
+      "label": 0,
+      "score": 4.923367977142334
+    },
+    {
+      "id": "test/20005.png",
+      "label": 0,
+      "score": 3.625642776489258
+    },
+    {
+      "id": "test/20006.png",
+      "label": 0,
+      "score": 3.8241770267486572
+    },
+    {
+      "id": "test/20007.png",
+      "label": 0,
+      "score": 3.661229372024536
+    },
+    {
+      "id": "test/20008.png",
+      "label": 0,
+      "score": 4.034172058105469
+    },
+    {
+      "id": "test/20009.png",
+      "label": 0,
+      "score": 3.4004452228546143
+    },
+    {
+      "id": "test/20010.png",
+      "label": 0,
+      "score": 4.911095142364502
+    },
+    {
+      "id": "test/20011.png",
+      "label": 0,
+      "score": 3.7539775371551514
+    },
+    {
+      "id": "test/20012.png",
+      "label": 0,
+      "score": 4.075119972229004
+    },
+    {
+      "id": "test/20013.png",
+      "label": 0,
+      "score": 3.8740100860595703
+    },
+    {
+      "id": "test/20014.png",
+      "label": 0,
+      "score": 3.8023183345794678
+    },
+    {
+      "id": "test/20015.png",
+      "label": 0,
+      "score": 3.7799267768859863
+    },
+    {
+      "id": "test/20016.png",
+      "label": 0,
+      "score": 3.666166067123413
+    },
+    {
+      "id": "test/20017.png",
+      "label": 0,
+      "score": 3.525688648223877
+    },
+    {
+      "id": "test/20018.png",
+      "label": 0,
+      "score": 4.4720234870910645
+    },
+    {
+      "id": "test/20019.png",
+      "label": 0,
+      "score": 3.7232885360717773
+    },
+    {
+      "id": "test/20020.png",
+      "label": 0,
+      "score": 5.080245494842529
+    },
+    {
+      "id": "test/20021.png",
+      "label": 0,
+      "score": 4.024134635925293
+    },
+    {
+      "id": "test/20022.png",
+      "label": 0,
+      "score": 3.6243033409118652
+    },
+    {
+      "id": "test/20023.png",
+      "label": 0,
+      "score": 5.702495574951172
+    },
+    {
+      "id": "test/20024.png",
+      "label": 0,
+      "score": 4.088250160217285
+    },
+    {
+      "id": "test/20025.png",
+      "label": 0,
+      "score": 3.3407628536224365
+    },
+    {
+      "id": "test/20026.png",
+      "label": 0,
+      "score": 4.27698278427124
+    },
+    {
+      "id": "test/20027.png",
+      "label": 0,
+      "score": 4.321882724761963
+    },
+    {
+      "id": "test/20028.png",
+      "label": 0,
+      "score": 3.443685293197632
+    },
+    {
+      "id": "test/20029.png",
+      "label": 0,
+      "score": 3.834303617477417
+    },
+    {
+      "id": "test/20030.png",
+      "label": 0,
+      "score": 3.8994576930999756
+    },
+    {
+      "id": "test/20031.png",
+      "label": 0,
+      "score": 3.3979387283325195
+    },
+    {
+      "id": "test/20032.png",
+      "label": 0,
+      "score": 3.5815789699554443
+    },
+    {
+      "id": "test/20033.png",
+      "label": 0,
+      "score": 3.766108751296997
+    },
+    {
+      "id": "test/20034.png",
+      "label": 0,
+      "score": 3.824244260787964
+    },
+    {
+      "id": "test/20035.png",
+      "label": 0,
+      "score": 5.229720592498779
+    },
+    {
+      "id": "test/20036.png",
+      "label": 0,
+      "score": 3.520798921585083
+    },
+    {
+      "id": "test/20037.png",
+      "label": 0,
+      "score": 3.496403932571411
+    },
+    {
+      "id": "test/20038.png",
+      "label": 0,
+      "score": 4.280702590942383
+    },
+    {
+      "id": "test/20039.png",
+      "label": 0,
+      "score": 4.306839466094971
+    },
+    {
+      "id": "test/20040.png",
+      "label": 0,
+      "score": 3.534658670425415
+    },
+    {
+      "id": "test/20041.png",
+      "label": 0,
+      "score": 3.6319847106933594
+    },
+    {
+      "id": "test/20042.png",
+      "label": 1,
+      "score": 9.052062034606934
+    },
+    {
+      "id": "test/20043.png",
+      "label": 0,
+      "score": 4.334530353546143
+    },
+    {
+      "id": "test/20044.png",
+      "label": 0,
+      "score": 4.43862771987915
+    },
+    {
+      "id": "test/20045.png",
+      "label": 0,
+      "score": 4.542891979217529
+    },
+    {
+      "id": "test/20046.png",
+      "label": 0,
+      "score": 3.657989263534546
+    },
+    {
+      "id": "test/20047.png",
+      "label": 0,
+      "score": 4.434151649475098
+    },
+    {
+      "id": "test/20048.png",
+      "label": 0,
+      "score": 4.026401519775391
+    },
+    {
+      "id": "test/20049.png",
+      "label": 0,
+      "score": 4.063080787658691
+    },
+    {
+      "id": "test/20050.png",
+      "label": 0,
+      "score": 3.9443085193634033
+    },
+    {
+      "id": "test/20051.png",
+      "label": 0,
+      "score": 3.563000440597534
+    },
+    {
+      "id": "test/20052.png",
+      "label": 0,
+      "score": 3.3382744789123535
+    },
+    {
+      "id": "test/20053.png",
+      "label": 0,
+      "score": 4.103798866271973
+    },
+    {
+      "id": "test/20054.png",
+      "label": 0,
+      "score": 5.367454528808594
+    },
+    {
+      "id": "test/20055.png",
+      "label": 0,
+      "score": 3.9627673625946045
+    },
+    {
+      "id": "test/20056.png",
+      "label": 1,
+      "score": 9.236100196838379
+    },
+    {
+      "id": "test/20057.png",
+      "label": 0,
+      "score": 6.545205593109131
+    },
+    {
+      "id": "test/20058.png",
+      "label": 0,
+      "score": 3.74477219581604
+    },
+    {
+      "id": "test/20059.png",
+      "label": 0,
+      "score": 3.9395651817321777
+    },
+    {
+      "id": "test/20060.png",
+      "label": 0,
+      "score": 3.566256046295166
+    },
+    {
+      "id": "test/20061.png",
+      "label": 0,
+      "score": 3.452324390411377
+    },
+    {
+      "id": "test/20062.png",
+      "label": 0,
+      "score": 4.100415229797363
+    },
+    {
+      "id": "test/20063.png",
+      "label": 0,
+      "score": 3.8949480056762695
+    },
+    {
+      "id": "test/20064.png",
+      "label": 0,
+      "score": 3.914069414138794
+    },
+    {
+      "id": "test/20065.png",
+      "label": 0,
+      "score": 4.678857326507568
+    },
+    {
+      "id": "test/20066.png",
+      "label": 0,
+      "score": 3.90252423286438
+    },
+    {
+      "id": "test/20067.png",
+      "label": 0,
+      "score": 4.065104007720947
+    },
+    {
+      "id": "test/20068.png",
+      "label": 1,
+      "score": 8.103007316589355
+    },
+    {
+      "id": "test/20069.png",
+      "label": 0,
+      "score": 3.670084238052368
+    },
+    {
+      "id": "test/20070.png",
+      "label": 0,
+      "score": 3.652919292449951
+    },
+    {
+      "id": "test/20071.png",
+      "label": 0,
+      "score": 3.560739278793335
+    },
+    {
+      "id": "test/20072.png",
+      "label": 0,
+      "score": 4.03839111328125
+    },
+    {
+      "id": "test/20073.png",
+      "label": 0,
+      "score": 3.367966651916504
+    },
+    {
+      "id": "test/20074.png",
+      "label": 0,
+      "score": 3.5579333305358887
+    },
+    {
+      "id": "test/20075.png",
+      "label": 0,
+      "score": 3.4688937664031982
+    },
+    {
+      "id": "test/20076.png",
+      "label": 0,
+      "score": 3.685054063796997
+    },
+    {
+      "id": "test/20077.png",
+      "label": 0,
+      "score": 4.395169258117676
+    },
+    {
+      "id": "test/20078.png",
+      "label": 0,
+      "score": 3.3677406311035156
+    },
+    {
+      "id": "test/20079.png",
+      "label": 0,
+      "score": 4.268937110900879
+    },
+    {
+      "id": "test/20080.png",
+      "label": 0,
+      "score": 4.3123087882995605
+    },
+    {
+      "id": "test/20081.png",
+      "label": 0,
+      "score": 4.100518703460693
+    },
+    {
+      "id": "test/20082.png",
+      "label": 0,
+      "score": 3.8821568489074707
+    },
+    {
+      "id": "test/20083.png",
+      "label": 0,
+      "score": 3.990293025970459
+    },
+    {
+      "id": "test/20084.png",
+      "label": 1,
+      "score": 6.473447322845459
+    },
+    {
+      "id": "test/20085.png",
+      "label": 0,
+      "score": 3.838391065597534
+    },
+    {
+      "id": "test/20086.png",
+      "label": 0,
+      "score": 3.6062655448913574
+    },
+    {
+      "id": "test/20087.png",
+      "label": 0,
+      "score": 3.8917152881622314
+    },
+    {
+      "id": "test/20088.png",
+      "label": 0,
+      "score": 4.224362373352051
+    },
+    {
+      "id": "test/20089.png",
+      "label": 0,
+      "score": 3.4944167137145996
+    },
+    {
+      "id": "test/20090.png",
+      "label": 0,
+      "score": 4.044400215148926
+    },
+    {
+      "id": "test/20091.png",
+      "label": 0,
+      "score": 5.3848772048950195
+    },
+    {
+      "id": "test/20092.png",
+      "label": 0,
+      "score": 3.9541540145874023
+    },
+    {
+      "id": "test/20093.png",
+      "label": 0,
+      "score": 3.8567698001861572
+    },
+    {
+      "id": "test/20094.png",
+      "label": 0,
+      "score": 3.7546913623809814
+    },
+    {
+      "id": "test/20095.png",
+      "label": 1,
+      "score": 5.664453029632568
+    },
+    {
+      "id": "test/20096.png",
+      "label": 0,
+      "score": 3.6731090545654297
+    },
+    {
+      "id": "test/20097.png",
+      "label": 0,
+      "score": 3.5871565341949463
+    },
+    {
+      "id": "test/20098.png",
+      "label": 0,
+      "score": 3.7402966022491455
+    },
+    {
+      "id": "test/20099.png",
+      "label": 1,
+      "score": 7.767709255218506
+    },
+    {
+      "id": "test/20100.png",
+      "label": 0,
+      "score": 3.7030632495880127
+    },
+    {
+      "id": "test/20101.png",
+      "label": 0,
+      "score": 4.82670783996582
+    },
+    {
+      "id": "test/20102.png",
+      "label": 0,
+      "score": 4.110418319702148
+    },
+    {
+      "id": "test/20103.png",
+      "label": 0,
+      "score": 3.9865429401397705
+    },
+    {
+      "id": "test/20104.png",
+      "label": 0,
+      "score": 3.5855298042297363
+    },
+    {
+      "id": "test/20105.png",
+      "label": 0,
+      "score": 4.061370849609375
+    },
+    {
+      "id": "test/20106.png",
+      "label": 0,
+      "score": 3.742173910140991
+    },
+    {
+      "id": "test/20107.png",
+      "label": 0,
+      "score": 3.6654531955718994
+    },
+    {
+      "id": "test/20108.png",
+      "label": 0,
+      "score": 3.9721791744232178
+    },
+    {
+      "id": "test/20109.png",
+      "label": 0,
+      "score": 3.592628002166748
+    },
+    {
+      "id": "test/20110.png",
+      "label": 0,
+      "score": 3.5725491046905518
+    },
+    {
+      "id": "test/20111.png",
+      "label": 0,
+      "score": 4.922111511230469
+    },
+    {
+      "id": "test/20112.png",
+      "label": 0,
+      "score": 3.7347333431243896
+    },
+    {
+      "id": "test/20113.png",
+      "label": 0,
+      "score": 4.001167297363281
+    },
+    {
+      "id": "test/20114.png",
+      "label": 0,
+      "score": 5.43759822845459
+    },
+    {
+      "id": "test/20115.png",
+      "label": 0,
+      "score": 4.314441680908203
+    },
+    {
+      "id": "test/20116.png",
+      "label": 0,
+      "score": 3.5140435695648193
+    },
+    {
+      "id": "test/20117.png",
+      "label": 1,
+      "score": 10.518003463745117
+    },
+    {
+      "id": "test/20118.png",
+      "label": 1,
+      "score": 5.221958637237549
+    },
+    {
+      "id": "test/20119.png",
+      "label": 0,
+      "score": 4.285214424133301
+    },
+    {
+      "id": "test/20120.png",
+      "label": 0,
+      "score": 5.412282943725586
+    },
+    {
+      "id": "test/20121.png",
+      "label": 1,
+      "score": 4.888974666595459
+    },
+    {
+      "id": "test/20122.png",
+      "label": 0,
+      "score": 4.459439277648926
+    },
+    {
+      "id": "test/20123.png",
+      "label": 0,
+      "score": 4.541132926940918
+    },
+    {
+      "id": "test/20124.png",
+      "label": 0,
+      "score": 3.525576591491699
+    },
+    {
+      "id": "test/20125.png",
+      "label": 1,
+      "score": 7.087411403656006
+    },
+    {
+      "id": "test/20126.png",
+      "label": 0,
+      "score": 3.5058562755584717
+    },
+    {
+      "id": "test/20127.png",
+      "label": 0,
+      "score": 4.47321081161499
+    },
+    {
+      "id": "test/20128.png",
+      "label": 0,
+      "score": 3.565094470977783
+    },
+    {
+      "id": "test/20129.png",
+      "label": 1,
+      "score": 7.645029067993164
+    },
+    {
+      "id": "test/20130.png",
+      "label": 1,
+      "score": 5.889423370361328
+    },
+    {
+      "id": "test/20131.png",
+      "label": 0,
+      "score": 3.608031988143921
+    },
+    {
+      "id": "test/20132.png",
+      "label": 0,
+      "score": 3.991345167160034
+    },
+    {
+      "id": "test/20133.png",
+      "label": 0,
+      "score": 3.7012016773223877
+    },
+    {
+      "id": "test/20134.png",
+      "label": 0,
+      "score": 4.39525842666626
+    },
+    {
+      "id": "test/20135.png",
+      "label": 0,
+      "score": 3.7021877765655518
+    },
+    {
+      "id": "test/20136.png",
+      "label": 0,
+      "score": 5.277508735656738
+    },
+    {
+      "id": "test/20137.png",
+      "label": 0,
+      "score": 3.805375814437866
+    },
+    {
+      "id": "test/20138.png",
+      "label": 0,
+      "score": 3.6385998725891113
+    },
+    {
+      "id": "test/20139.png",
+      "label": 1,
+      "score": 4.524013519287109
+    },
+    {
+      "id": "test/20140.png",
+      "label": 0,
+      "score": 3.9629764556884766
+    },
+    {
+      "id": "test/20141.png",
+      "label": 1,
+      "score": 6.078952312469482
+    },
+    {
+      "id": "test/20142.png",
+      "label": 1,
+      "score": 5.556342124938965
+    },
+    {
+      "id": "test/20143.png",
+      "label": 0,
+      "score": 3.7604737281799316
+    },
+    {
+      "id": "test/20144.png",
+      "label": 0,
+      "score": 4.1360392570495605
+    },
+    {
+      "id": "test/20145.png",
+      "label": 0,
+      "score": 4.261127471923828
+    },
+    {
+      "id": "test/20146.png",
+      "label": 0,
+      "score": 3.5148000717163086
+    },
+    {
+      "id": "test/20147.png",
+      "label": 0,
+      "score": 4.083098888397217
+    },
+    {
+      "id": "test/20148.png",
+      "label": 0,
+      "score": 3.653693199157715
+    },
+    {
+      "id": "test/20149.png",
+      "label": 0,
+      "score": 3.9506988525390625
+    },
+    {
+      "id": "test/20150.png",
+      "label": 0,
+      "score": 3.345588445663452
+    },
+    {
+      "id": "test/20151.png",
+      "label": 0,
+      "score": 3.9919843673706055
+    },
+    {
+      "id": "test/20152.png",
+      "label": 0,
+      "score": 3.5052778720855713
+    },
+    {
+      "id": "test/20153.png",
+      "label": 0,
+      "score": 3.419546365737915
+    },
+    {
+      "id": "test/20154.png",
+      "label": 0,
+      "score": 5.53386926651001
+    },
+    {
+      "id": "test/20155.png",
+      "label": 1,
+      "score": 5.315291404724121
+    },
+    {
+      "id": "test/20156.png",
+      "label": 0,
+      "score": 3.5123932361602783
+    },
+    {
+      "id": "test/20157.png",
+      "label": 0,
+      "score": 3.606679916381836
+    },
+    {
+      "id": "test/20158.png",
+      "label": 1,
+      "score": 6.536260604858398
+    },
+    {
+      "id": "test/20159.png",
+      "label": 1,
+      "score": 4.047515392303467
+    },
+    {
+      "id": "test/20160.png",
+      "label": 0,
+      "score": 4.004138469696045
+    },
+    {
+      "id": "test/20161.png",
+      "label": 0,
+      "score": 3.6720330715179443
+    },
+    {
+      "id": "test/20162.png",
+      "label": 0,
+      "score": 4.192002773284912
+    },
+    {
+      "id": "test/20163.png",
+      "label": 0,
+      "score": 4.0954084396362305
+    },
+    {
+      "id": "test/20164.png",
+      "label": 0,
+      "score": 3.8984663486480713
+    },
+    {
+      "id": "test/20165.png",
+      "label": 0,
+      "score": 3.6426305770874023
+    },
+    {
+      "id": "test/20166.png",
+      "label": 0,
+      "score": 3.646326780319214
+    },
+    {
+      "id": "test/20167.png",
+      "label": 0,
+      "score": 3.7562997341156006
+    },
+    {
+      "id": "test/20168.png",
+      "label": 0,
+      "score": 3.8776156902313232
+    },
+    {
+      "id": "test/20169.png",
+      "label": 0,
+      "score": 4.424031734466553
+    },
+    {
+      "id": "test/20170.png",
+      "label": 0,
+      "score": 3.912929058074951
+    },
+    {
+      "id": "test/20171.png",
+      "label": 0,
+      "score": 3.86275577545166
+    },
+    {
+      "id": "test/20172.png",
+      "label": 1,
+      "score": 10.647172927856445
+    },
+    {
+      "id": "test/20173.png",
+      "label": 0,
+      "score": 5.019639492034912
+    },
+    {
+      "id": "test/20174.png",
+      "label": 0,
+      "score": 3.969726085662842
+    },
+    {
+      "id": "test/20175.png",
+      "label": 1,
+      "score": 9.093330383300781
+    },
+    {
+      "id": "test/20176.png",
+      "label": 0,
+      "score": 3.6760027408599854
+    },
+    {
+      "id": "test/20177.png",
+      "label": 1,
+      "score": 7.438230991363525
+    },
+    {
+      "id": "test/20178.png",
+      "label": 0,
+      "score": 4.23961877822876
+    },
+    {
+      "id": "test/20179.png",
+      "label": 0,
+      "score": 3.956918478012085
+    },
+    {
+      "id": "test/20180.png",
+      "label": 0,
+      "score": 3.5948660373687744
+    },
+    {
+      "id": "test/20181.png",
+      "label": 0,
+      "score": 3.582995891571045
+    },
+    {
+      "id": "test/20182.png",
+      "label": 0,
+      "score": 3.826505661010742
+    },
+    {
+      "id": "test/20183.png",
+      "label": 0,
+      "score": 4.898369789123535
+    },
+    {
+      "id": "test/20184.png",
+      "label": 0,
+      "score": 3.641326427459717
+    },
+    {
+      "id": "test/20185.png",
+      "label": 0,
+      "score": 3.754667282104492
+    },
+    {
+      "id": "test/20186.png",
+      "label": 0,
+      "score": 3.970860004425049
+    },
+    {
+      "id": "test/20187.png",
+      "label": 0,
+      "score": 4.300678253173828
+    },
+    {
+      "id": "test/20188.png",
+      "label": 0,
+      "score": 3.755513906478882
+    },
+    {
+      "id": "test/20189.png",
+      "label": 0,
+      "score": 3.734825849533081
+    },
+    {
+      "id": "test/20190.png",
+      "label": 1,
+      "score": 7.177524089813232
+    },
+    {
+      "id": "test/20191.png",
+      "label": 0,
+      "score": 3.608234167098999
+    },
+    {
+      "id": "test/20192.png",
+      "label": 0,
+      "score": 4.373518466949463
+    },
+    {
+      "id": "test/20193.png",
+      "label": 1,
+      "score": 8.299567222595215
+    },
+    {
+      "id": "test/20194.png",
+      "label": 0,
+      "score": 3.4131414890289307
+    },
+    {
+      "id": "test/20195.png",
+      "label": 0,
+      "score": 3.8598520755767822
+    },
+    {
+      "id": "test/20196.png",
+      "label": 0,
+      "score": 4.224537372589111
+    },
+    {
+      "id": "test/20197.png",
+      "label": 0,
+      "score": 3.605451822280884
+    },
+    {
+      "id": "test/20198.png",
+      "label": 0,
+      "score": 3.844188690185547
+    },
+    {
+      "id": "test/20199.png",
+      "label": 0,
+      "score": 5.263121604919434
+    },
+    {
+      "id": "test/20200.png",
+      "label": 0,
+      "score": 3.894340991973877
+    },
+    {
+      "id": "test/20201.png",
+      "label": 0,
+      "score": 5.5245232582092285
+    },
+    {
+      "id": "test/20202.png",
+      "label": 0,
+      "score": 3.5864627361297607
+    },
+    {
+      "id": "test/20203.png",
+      "label": 0,
+      "score": 5.065688133239746
+    },
+    {
+      "id": "test/20204.png",
+      "label": 1,
+      "score": 7.288674831390381
+    },
+    {
+      "id": "test/20205.png",
+      "label": 0,
+      "score": 3.641793966293335
+    },
+    {
+      "id": "test/20206.png",
+      "label": 0,
+      "score": 3.6271915435791016
+    },
+    {
+      "id": "test/20207.png",
+      "label": 0,
+      "score": 3.639427900314331
+    },
+    {
+      "id": "test/20208.png",
+      "label": 0,
+      "score": 3.4684996604919434
+    },
+    {
+      "id": "test/20209.png",
+      "label": 1,
+      "score": 5.73973274230957
+    },
+    {
+      "id": "test/20210.png",
+      "label": 0,
+      "score": 3.716240644454956
+    },
+    {
+      "id": "test/20211.png",
+      "label": 0,
+      "score": 3.418325185775757
+    },
+    {
+      "id": "test/20212.png",
+      "label": 0,
+      "score": 3.9858248233795166
+    },
+    {
+      "id": "test/20213.png",
+      "label": 0,
+      "score": 4.7509307861328125
+    },
+    {
+      "id": "test/20214.png",
+      "label": 0,
+      "score": 5.307496070861816
+    },
+    {
+      "id": "test/20215.png",
+      "label": 0,
+      "score": 3.683652400970459
+    },
+    {
+      "id": "test/20216.png",
+      "label": 0,
+      "score": 3.841435670852661
+    },
+    {
+      "id": "test/20217.png",
+      "label": 1,
+      "score": 6.109532356262207
+    },
+    {
+      "id": "test/20218.png",
+      "label": 0,
+      "score": 3.68721604347229
+    },
+    {
+      "id": "test/20219.png",
+      "label": 0,
+      "score": 3.8980586528778076
+    },
+    {
+      "id": "test/20220.png",
+      "label": 0,
+      "score": 3.6770594120025635
+    },
+    {
+      "id": "test/20221.png",
+      "label": 0,
+      "score": 3.8481011390686035
+    },
+    {
+      "id": "test/20222.png",
+      "label": 0,
+      "score": 4.767706394195557
+    },
+    {
+      "id": "test/20223.png",
+      "label": 0,
+      "score": 4.868138790130615
+    },
+    {
+      "id": "test/20224.png",
+      "label": 0,
+      "score": 4.122091770172119
+    },
+    {
+      "id": "test/20225.png",
+      "label": 0,
+      "score": 4.1669487953186035
+    },
+    {
+      "id": "test/20226.png",
+      "label": 0,
+      "score": 4.4020795822143555
+    },
+    {
+      "id": "test/20227.png",
+      "label": 0,
+      "score": 3.6758880615234375
+    },
+    {
+      "id": "test/20228.png",
+      "label": 1,
+      "score": 3.7349274158477783
+    },
+    {
+      "id": "test/20229.png",
+      "label": 0,
+      "score": 5.448293209075928
+    },
+    {
+      "id": "test/20230.png",
+      "label": 0,
+      "score": 4.045243263244629
+    },
+    {
+      "id": "test/20231.png",
+      "label": 1,
+      "score": 4.213801383972168
+    },
+    {
+      "id": "test/20232.png",
+      "label": 0,
+      "score": 3.683622360229492
+    },
+    {
+      "id": "test/20233.png",
+      "label": 0,
+      "score": 3.951418876647949
+    },
+    {
+      "id": "test/20234.png",
+      "label": 0,
+      "score": 3.4734153747558594
+    },
+    {
+      "id": "test/20235.png",
+      "label": 0,
+      "score": 4.576732158660889
+    },
+    {
+      "id": "test/20236.png",
+      "label": 1,
+      "score": 4.08047342300415
+    },
+    {
+      "id": "test/20237.png",
+      "label": 0,
+      "score": 4.200763702392578
+    },
+    {
+      "id": "test/20238.png",
+      "label": 0,
+      "score": 3.790009021759033
+    },
+    {
+      "id": "test/20239.png",
+      "label": 0,
+      "score": 3.86171817779541
+    },
+    {
+      "id": "test/20240.png",
+      "label": 0,
+      "score": 3.5809273719787598
+    },
+    {
+      "id": "test/20241.png",
+      "label": 0,
+      "score": 4.50668478012085
+    },
+    {
+      "id": "test/20242.png",
+      "label": 0,
+      "score": 3.59694242477417
+    },
+    {
+      "id": "test/20243.png",
+      "label": 0,
+      "score": 4.198889255523682
+    },
+    {
+      "id": "test/20244.png",
+      "label": 0,
+      "score": 4.016361713409424
+    },
+    {
+      "id": "test/20245.png",
+      "label": 0,
+      "score": 4.40786600112915
+    },
+    {
+      "id": "test/20246.png",
+      "label": 1,
+      "score": 7.761181354522705
+    },
+    {
+      "id": "test/20247.png",
+      "label": 0,
+      "score": 4.629457950592041
+    },
+    {
+      "id": "test/20248.png",
+      "label": 0,
+      "score": 3.873641014099121
+    },
+    {
+      "id": "test/20249.png",
+      "label": 0,
+      "score": 3.502284288406372
+    },
+    {
+      "id": "test/20250.png",
+      "label": 0,
+      "score": 3.354024648666382
+    },
+    {
+      "id": "test/20251.png",
+      "label": 0,
+      "score": 3.5966908931732178
+    },
+    {
+      "id": "test/20252.png",
+      "label": 0,
+      "score": 4.749346733093262
+    },
+    {
+      "id": "test/20253.png",
+      "label": 0,
+      "score": 4.024563312530518
+    },
+    {
+      "id": "test/20254.png",
+      "label": 0,
+      "score": 4.036123752593994
+    },
+    {
+      "id": "test/20255.png",
+      "label": 0,
+      "score": 3.6874821186065674
+    },
+    {
+      "id": "test/20256.png",
+      "label": 0,
+      "score": 3.9437174797058105
+    },
+    {
+      "id": "test/20257.png",
+      "label": 0,
+      "score": 4.101194858551025
+    },
+    {
+      "id": "test/20258.png",
+      "label": 0,
+      "score": 3.9079415798187256
+    },
+    {
+      "id": "test/20259.png",
+      "label": 1,
+      "score": 4.445319175720215
+    },
+    {
+      "id": "test/20260.png",
+      "label": 0,
+      "score": 3.3070850372314453
+    },
+    {
+      "id": "test/20261.png",
+      "label": 0,
+      "score": 4.315661430358887
+    },
+    {
+      "id": "test/20262.png",
+      "label": 0,
+      "score": 4.1256103515625
+    },
+    {
+      "id": "test/20263.png",
+      "label": 0,
+      "score": 3.3622748851776123
+    },
+    {
+      "id": "test/20264.png",
+      "label": 1,
+      "score": 6.496031761169434
+    },
+    {
+      "id": "test/20265.png",
+      "label": 0,
+      "score": 4.028155326843262
+    },
+    {
+      "id": "test/20266.png",
+      "label": 0,
+      "score": 3.733050584793091
+    },
+    {
+      "id": "test/20267.png",
+      "label": 0,
+      "score": 4.232143878936768
+    },
+    {
+      "id": "test/20268.png",
+      "label": 0,
+      "score": 3.587343215942383
+    },
+    {
+      "id": "test/20269.png",
+      "label": 0,
+      "score": 3.725278854370117
+    },
+    {
+      "id": "test/20270.png",
+      "label": 0,
+      "score": 4.843270301818848
+    },
+    {
+      "id": "test/20271.png",
+      "label": 0,
+      "score": 3.82716965675354
+    },
+    {
+      "id": "test/20272.png",
+      "label": 0,
+      "score": 3.7948415279388428
+    },
+    {
+      "id": "test/20273.png",
+      "label": 0,
+      "score": 3.555281400680542
+    },
+    {
+      "id": "test/20274.png",
+      "label": 0,
+      "score": 3.7272825241088867
+    },
+    {
+      "id": "test/20275.png",
+      "label": 1,
+      "score": 4.208095550537109
+    },
+    {
+      "id": "test/20276.png",
+      "label": 0,
+      "score": 3.54836368560791
+    },
+    {
+      "id": "test/20277.png",
+      "label": 0,
+      "score": 4.50197696685791
+    },
+    {
+      "id": "test/20278.png",
+      "label": 0,
+      "score": 3.6895477771759033
+    },
+    {
+      "id": "test/20279.png",
+      "label": 0,
+      "score": 5.012012481689453
+    },
+    {
+      "id": "test/20280.png",
+      "label": 0,
+      "score": 3.599309206008911
+    },
+    {
+      "id": "test/20281.png",
+      "label": 1,
+      "score": 3.6103322505950928
+    },
+    {
+      "id": "test/20282.png",
+      "label": 0,
+      "score": 3.916654586791992
+    },
+    {
+      "id": "test/20283.png",
+      "label": 0,
+      "score": 3.758219003677368
+    },
+    {
+      "id": "test/20284.png",
+      "label": 0,
+      "score": 3.6401026248931885
+    },
+    {
+      "id": "test/20285.png",
+      "label": 0,
+      "score": 4.7821502685546875
+    },
+    {
+      "id": "test/20286.png",
+      "label": 0,
+      "score": 3.817476749420166
+    },
+    {
+      "id": "test/20287.png",
+      "label": 0,
+      "score": 3.957726001739502
+    },
+    {
+      "id": "test/20288.png",
+      "label": 0,
+      "score": 3.455399513244629
+    },
+    {
+      "id": "test/20289.png",
+      "label": 0,
+      "score": 3.728182077407837
+    },
+    {
+      "id": "test/20290.png",
+      "label": 0,
+      "score": 3.5859215259552
+    },
+    {
+      "id": "test/20291.png",
+      "label": 0,
+      "score": 3.3938560485839844
+    },
+    {
+      "id": "test/20292.png",
+      "label": 0,
+      "score": 4.611608505249023
+    },
+    {
+      "id": "test/20293.png",
+      "label": 0,
+      "score": 3.761544942855835
+    },
+    {
+      "id": "test/20294.png",
+      "label": 0,
+      "score": 4.40199613571167
+    },
+    {
+      "id": "test/20295.png",
+      "label": 1,
+      "score": 9.063822746276855
+    },
+    {
+      "id": "test/20296.png",
+      "label": 0,
+      "score": 3.910376787185669
+    },
+    {
+      "id": "test/20297.png",
+      "label": 1,
+      "score": 5.168255805969238
+    },
+    {
+      "id": "test/20298.png",
+      "label": 0,
+      "score": 3.4774372577667236
+    },
+    {
+      "id": "test/20299.png",
+      "label": 0,
+      "score": 3.7098658084869385
+    },
+    {
+      "id": "test/20300.png",
+      "label": 0,
+      "score": 3.9393086433410645
+    },
+    {
+      "id": "test/20301.png",
+      "label": 0,
+      "score": 3.6080193519592285
+    },
+    {
+      "id": "test/20302.png",
+      "label": 0,
+      "score": 3.7004990577697754
+    },
+    {
+      "id": "test/20303.png",
+      "label": 0,
+      "score": 3.8145999908447266
+    },
+    {
+      "id": "test/20304.png",
+      "label": 0,
+      "score": 4.018128871917725
+    },
+    {
+      "id": "test/20305.png",
+      "label": 0,
+      "score": 3.7761504650115967
+    },
+    {
+      "id": "test/20306.png",
+      "label": 0,
+      "score": 3.9203152656555176
+    },
+    {
+      "id": "test/20307.png",
+      "label": 0,
+      "score": 4.637555122375488
+    },
+    {
+      "id": "test/20308.png",
+      "label": 0,
+      "score": 3.9062325954437256
+    },
+    {
+      "id": "test/20309.png",
+      "label": 0,
+      "score": 3.7926533222198486
+    },
+    {
+      "id": "test/20310.png",
+      "label": 0,
+      "score": 3.8493950366973877
+    },
+    {
+      "id": "test/20311.png",
+      "label": 0,
+      "score": 3.739755153656006
+    },
+    {
+      "id": "test/20312.png",
+      "label": 0,
+      "score": 4.237414836883545
+    },
+    {
+      "id": "test/20313.png",
+      "label": 0,
+      "score": 3.886667013168335
+    },
+    {
+      "id": "test/20314.png",
+      "label": 0,
+      "score": 3.5078248977661133
+    },
+    {
+      "id": "test/20315.png",
+      "label": 0,
+      "score": 3.4632351398468018
+    },
+    {
+      "id": "test/20316.png",
+      "label": 0,
+      "score": 3.77695894241333
+    },
+    {
+      "id": "test/20317.png",
+      "label": 0,
+      "score": 3.6452250480651855
+    },
+    {
+      "id": "test/20318.png",
+      "label": 0,
+      "score": 3.6045169830322266
+    },
+    {
+      "id": "test/20319.png",
+      "label": 1,
+      "score": 6.232892990112305
+    },
+    {
+      "id": "test/20320.png",
+      "label": 0,
+      "score": 4.222767353057861
+    },
+    {
+      "id": "test/20321.png",
+      "label": 0,
+      "score": 3.8759284019470215
+    },
+    {
+      "id": "test/20322.png",
+      "label": 0,
+      "score": 5.795560359954834
+    },
+    {
+      "id": "test/20323.png",
+      "label": 0,
+      "score": 3.470935821533203
+    },
+    {
+      "id": "test/20324.png",
+      "label": 0,
+      "score": 3.8846547603607178
+    },
+    {
+      "id": "test/20325.png",
+      "label": 0,
+      "score": 4.282153129577637
+    },
+    {
+      "id": "test/20326.png",
+      "label": 0,
+      "score": 4.217462539672852
+    },
+    {
+      "id": "test/20327.png",
+      "label": 0,
+      "score": 3.503234386444092
+    },
+    {
+      "id": "test/20328.png",
+      "label": 0,
+      "score": 4.179619312286377
+    },
+    {
+      "id": "test/20329.png",
+      "label": 0,
+      "score": 3.6775403022766113
+    },
+    {
+      "id": "test/20330.png",
+      "label": 0,
+      "score": 3.932664394378662
+    },
+    {
+      "id": "test/20331.png",
+      "label": 0,
+      "score": 3.7554075717926025
+    },
+    {
+      "id": "test/20332.png",
+      "label": 0,
+      "score": 3.8122313022613525
+    },
+    {
+      "id": "test/20333.png",
+      "label": 0,
+      "score": 3.633814573287964
+    },
+    {
+      "id": "test/20334.png",
+      "label": 1,
+      "score": 5.384038925170898
+    },
+    {
+      "id": "test/20335.png",
+      "label": 0,
+      "score": 4.551368236541748
+    },
+    {
+      "id": "test/20336.png",
+      "label": 0,
+      "score": 3.983505964279175
+    },
+    {
+      "id": "test/20337.png",
+      "label": 0,
+      "score": 3.8934409618377686
+    },
+    {
+      "id": "test/20338.png",
+      "label": 0,
+      "score": 3.722931385040283
+    },
+    {
+      "id": "test/20339.png",
+      "label": 0,
+      "score": 3.2963953018188477
+    },
+    {
+      "id": "test/20340.png",
+      "label": 0,
+      "score": 4.264177322387695
+    },
+    {
+      "id": "test/20341.png",
+      "label": 0,
+      "score": 4.403656005859375
+    },
+    {
+      "id": "test/20342.png",
+      "label": 0,
+      "score": 4.0607008934021
+    },
+    {
+      "id": "test/20343.png",
+      "label": 0,
+      "score": 3.6712756156921387
+    },
+    {
+      "id": "test/20344.png",
+      "label": 0,
+      "score": 3.7705821990966797
+    },
+    {
+      "id": "test/20345.png",
+      "label": 0,
+      "score": 4.085040092468262
+    },
+    {
+      "id": "test/20346.png",
+      "label": 0,
+      "score": 3.314586639404297
+    },
+    {
+      "id": "test/20347.png",
+      "label": 0,
+      "score": 3.703502893447876
+    },
+    {
+      "id": "test/20348.png",
+      "label": 0,
+      "score": 4.71943998336792
+    },
+    {
+      "id": "test/20349.png",
+      "label": 0,
+      "score": 3.5263819694519043
+    },
+    {
+      "id": "test/20350.png",
+      "label": 0,
+      "score": 3.6434290409088135
+    },
+    {
+      "id": "test/20351.png",
+      "label": 0,
+      "score": 4.491356372833252
+    },
+    {
+      "id": "test/20352.png",
+      "label": 0,
+      "score": 3.3421778678894043
+    },
+    {
+      "id": "test/20353.png",
+      "label": 0,
+      "score": 3.7993133068084717
+    },
+    {
+      "id": "test/20354.png",
+      "label": 0,
+      "score": 3.8876113891601562
+    },
+    {
+      "id": "test/20355.png",
+      "label": 0,
+      "score": 3.7271714210510254
+    },
+    {
+      "id": "test/20356.png",
+      "label": 0,
+      "score": 3.7828264236450195
+    },
+    {
+      "id": "test/20357.png",
+      "label": 0,
+      "score": 4.1374969482421875
+    },
+    {
+      "id": "test/20358.png",
+      "label": 0,
+      "score": 4.111938953399658
+    },
+    {
+      "id": "test/20359.png",
+      "label": 0,
+      "score": 3.8674376010894775
+    },
+    {
+      "id": "test/20360.png",
+      "label": 0,
+      "score": 3.4323391914367676
+    },
+    {
+      "id": "test/20361.png",
+      "label": 0,
+      "score": 4.4637861251831055
+    },
+    {
+      "id": "test/20362.png",
+      "label": 0,
+      "score": 3.4398529529571533
+    },
+    {
+      "id": "test/20363.png",
+      "label": 0,
+      "score": 3.555467128753662
+    },
+    {
+      "id": "test/20364.png",
+      "label": 0,
+      "score": 4.0635199546813965
+    },
+    {
+      "id": "test/20365.png",
+      "label": 0,
+      "score": 4.20044469833374
+    },
+    {
+      "id": "test/20366.png",
+      "label": 0,
+      "score": 4.396341323852539
+    },
+    {
+      "id": "test/20367.png",
+      "label": 0,
+      "score": 3.840458631515503
+    },
+    {
+      "id": "test/20368.png",
+      "label": 0,
+      "score": 5.123386859893799
+    },
+    {
+      "id": "test/20369.png",
+      "label": 0,
+      "score": 3.2854673862457275
+    },
+    {
+      "id": "test/20370.png",
+      "label": 0,
+      "score": 4.344147205352783
+    },
+    {
+      "id": "test/20371.png",
+      "label": 0,
+      "score": 3.7676806449890137
+    },
+    {
+      "id": "test/20372.png",
+      "label": 0,
+      "score": 4.911702632904053
+    },
+    {
+      "id": "test/20373.png",
+      "label": 0,
+      "score": 3.9479622840881348
+    },
+    {
+      "id": "test/20374.png",
+      "label": 0,
+      "score": 3.8700404167175293
+    },
+    {
+      "id": "test/20375.png",
+      "label": 0,
+      "score": 3.7948784828186035
+    },
+    {
+      "id": "test/20376.png",
+      "label": 0,
+      "score": 4.572460174560547
+    },
+    {
+      "id": "test/20377.png",
+      "label": 0,
+      "score": 3.464857578277588
+    },
+    {
+      "id": "test/20378.png",
+      "label": 1,
+      "score": 11.770222663879395
+    },
+    {
+      "id": "test/20379.png",
+      "label": 0,
+      "score": 3.6004223823547363
+    },
+    {
+      "id": "test/20380.png",
+      "label": 0,
+      "score": 5.433215618133545
+    },
+    {
+      "id": "test/20381.png",
+      "label": 0,
+      "score": 5.212033271789551
+    },
+    {
+      "id": "test/20382.png",
+      "label": 0,
+      "score": 3.5002734661102295
+    },
+    {
+      "id": "test/20383.png",
+      "label": 0,
+      "score": 3.671393394470215
+    },
+    {
+      "id": "test/20384.png",
+      "label": 0,
+      "score": 3.594870090484619
+    },
+    {
+      "id": "test/20385.png",
+      "label": 0,
+      "score": 3.4504454135894775
+    },
+    {
+      "id": "test/20386.png",
+      "label": 0,
+      "score": 3.188443899154663
+    },
+    {
+      "id": "test/20387.png",
+      "label": 0,
+      "score": 3.510545253753662
+    },
+    {
+      "id": "test/20388.png",
+      "label": 0,
+      "score": 3.5957226753234863
+    },
+    {
+      "id": "test/20389.png",
+      "label": 0,
+      "score": 3.824578285217285
+    },
+    {
+      "id": "test/20390.png",
+      "label": 0,
+      "score": 4.678241729736328
+    },
+    {
+      "id": "test/20391.png",
+      "label": 0,
+      "score": 4.357409477233887
+    },
+    {
+      "id": "test/20392.png",
+      "label": 1,
+      "score": 5.386150360107422
+    },
+    {
+      "id": "test/20393.png",
+      "label": 0,
+      "score": 3.9126694202423096
+    },
+    {
+      "id": "test/20394.png",
+      "label": 0,
+      "score": 3.926633358001709
+    },
+    {
+      "id": "test/20395.png",
+      "label": 0,
+      "score": 3.5837645530700684
+    },
+    {
+      "id": "test/20396.png",
+      "label": 0,
+      "score": 4.815674781799316
+    },
+    {
+      "id": "test/20397.png",
+      "label": 0,
+      "score": 3.616858959197998
+    },
+    {
+      "id": "test/20398.png",
+      "label": 0,
+      "score": 4.143431186676025
+    },
+    {
+      "id": "test/20399.png",
+      "label": 0,
+      "score": 3.8380467891693115
+    },
+    {
+      "id": "test/20400.png",
+      "label": 0,
+      "score": 3.9142422676086426
+    },
+    {
+      "id": "test/20401.png",
+      "label": 0,
+      "score": 4.003304958343506
+    },
+    {
+      "id": "test/20402.png",
+      "label": 0,
+      "score": 3.3988499641418457
+    },
+    {
+      "id": "test/20403.png",
+      "label": 1,
+      "score": 4.503977298736572
+    },
+    {
+      "id": "test/20404.png",
+      "label": 0,
+      "score": 3.32716703414917
+    },
+    {
+      "id": "test/20405.png",
+      "label": 0,
+      "score": 3.5847318172454834
+    },
+    {
+      "id": "test/20406.png",
+      "label": 0,
+      "score": 3.726172685623169
+    },
+    {
+      "id": "test/20407.png",
+      "label": 0,
+      "score": 3.636838436126709
+    },
+    {
+      "id": "test/20408.png",
+      "label": 0,
+      "score": 3.656219482421875
+    },
+    {
+      "id": "test/20409.png",
+      "label": 0,
+      "score": 3.32580828666687
+    },
+    {
+      "id": "test/20410.png",
+      "label": 0,
+      "score": 3.518315315246582
+    },
+    {
+      "id": "test/20411.png",
+      "label": 0,
+      "score": 4.545506000518799
+    },
+    {
+      "id": "test/20412.png",
+      "label": 0,
+      "score": 4.2320756912231445
+    },
+    {
+      "id": "test/20413.png",
+      "label": 0,
+      "score": 3.6031904220581055
+    },
+    {
+      "id": "test/20414.png",
+      "label": 0,
+      "score": 3.3929357528686523
+    },
+    {
+      "id": "test/20415.png",
+      "label": 0,
+      "score": 4.129169940948486
+    },
+    {
+      "id": "test/20416.png",
+      "label": 1,
+      "score": 6.422340393066406
+    },
+    {
+      "id": "test/20417.png",
+      "label": 0,
+      "score": 3.877563238143921
+    },
+    {
+      "id": "test/20418.png",
+      "label": 0,
+      "score": 3.5456745624542236
+    },
+    {
+      "id": "test/20419.png",
+      "label": 0,
+      "score": 3.5284526348114014
+    },
+    {
+      "id": "test/20420.png",
+      "label": 0,
+      "score": 4.258574485778809
+    },
+    {
+      "id": "test/20421.png",
+      "label": 0,
+      "score": 3.2837166786193848
+    },
+    {
+      "id": "test/20422.png",
+      "label": 0,
+      "score": 3.7759885787963867
+    },
+    {
+      "id": "test/20423.png",
+      "label": 0,
+      "score": 4.142841815948486
+    },
+    {
+      "id": "test/20424.png",
+      "label": 0,
+      "score": 4.138500690460205
+    },
+    {
+      "id": "test/20425.png",
+      "label": 0,
+      "score": 3.533559560775757
+    },
+    {
+      "id": "test/20426.png",
+      "label": 1,
+      "score": 4.561488151550293
+    },
+    {
+      "id": "test/20427.png",
+      "label": 0,
+      "score": 3.2956011295318604
+    },
+    {
+      "id": "test/20428.png",
+      "label": 1,
+      "score": 5.824076175689697
+    },
+    {
+      "id": "test/20429.png",
+      "label": 0,
+      "score": 4.126912593841553
+    },
+    {
+      "id": "test/20430.png",
+      "label": 0,
+      "score": 3.8736345767974854
+    },
+    {
+      "id": "test/20431.png",
+      "label": 0,
+      "score": 3.7102224826812744
+    },
+    {
+      "id": "test/20432.png",
+      "label": 0,
+      "score": 4.360361099243164
+    },
+    {
+      "id": "test/20433.png",
+      "label": 0,
+      "score": 3.4256863594055176
+    },
+    {
+      "id": "test/20434.png",
+      "label": 1,
+      "score": 8.170976638793945
+    },
+    {
+      "id": "test/20435.png",
+      "label": 0,
+      "score": 3.85105037689209
+    },
+    {
+      "id": "test/20436.png",
+      "label": 0,
+      "score": 3.7463629245758057
+    },
+    {
+      "id": "test/20437.png",
+      "label": 0,
+      "score": 3.6476714611053467
+    },
+    {
+      "id": "test/20438.png",
+      "label": 0,
+      "score": 4.6581130027771
+    },
+    {
+      "id": "test/20439.png",
+      "label": 1,
+      "score": 5.383504390716553
+    },
+    {
+      "id": "test/20440.png",
+      "label": 0,
+      "score": 3.3046820163726807
+    },
+    {
+      "id": "test/20441.png",
+      "label": 0,
+      "score": 3.799617052078247
+    },
+    {
+      "id": "test/20442.png",
+      "label": 0,
+      "score": 3.4879915714263916
+    },
+    {
+      "id": "test/20443.png",
+      "label": 0,
+      "score": 3.654890537261963
+    },
+    {
+      "id": "test/20444.png",
+      "label": 0,
+      "score": 3.7405776977539062
+    },
+    {
+      "id": "test/20445.png",
+      "label": 0,
+      "score": 5.055251121520996
+    },
+    {
+      "id": "test/20446.png",
+      "label": 0,
+      "score": 3.888833999633789
+    },
+    {
+      "id": "test/20447.png",
+      "label": 0,
+      "score": 3.375115156173706
+    },
+    {
+      "id": "test/20448.png",
+      "label": 0,
+      "score": 4.06522274017334
+    },
+    {
+      "id": "test/20449.png",
+      "label": 0,
+      "score": 3.708878517150879
+    },
+    {
+      "id": "test/20450.png",
+      "label": 0,
+      "score": 4.107320785522461
+    },
+    {
+      "id": "test/20451.png",
+      "label": 0,
+      "score": 4.618253707885742
+    },
+    {
+      "id": "test/20452.png",
+      "label": 1,
+      "score": 5.6946635246276855
+    },
+    {
+      "id": "test/20453.png",
+      "label": 0,
+      "score": 3.9019649028778076
+    },
+    {
+      "id": "test/20454.png",
+      "label": 0,
+      "score": 4.209693908691406
+    },
+    {
+      "id": "test/20455.png",
+      "label": 0,
+      "score": 3.9611334800720215
+    },
+    {
+      "id": "test/20456.png",
+      "label": 0,
+      "score": 3.6518301963806152
+    },
+    {
+      "id": "test/20457.png",
+      "label": 1,
+      "score": 7.241260051727295
+    },
+    {
+      "id": "test/20458.png",
+      "label": 0,
+      "score": 3.926435708999634
+    },
+    {
+      "id": "test/20459.png",
+      "label": 0,
+      "score": 3.5973315238952637
+    },
+    {
+      "id": "test/20460.png",
+      "label": 0,
+      "score": 3.262230634689331
+    },
+    {
+      "id": "test/20461.png",
+      "label": 0,
+      "score": 3.5105528831481934
+    },
+    {
+      "id": "test/20462.png",
+      "label": 0,
+      "score": 4.865534782409668
+    },
+    {
+      "id": "test/20463.png",
+      "label": 0,
+      "score": 4.200969219207764
+    },
+    {
+      "id": "test/20464.png",
+      "label": 0,
+      "score": 4.15116024017334
+    },
+    {
+      "id": "test/20465.png",
+      "label": 1,
+      "score": 5.56214714050293
+    },
+    {
+      "id": "test/20466.png",
+      "label": 0,
+      "score": 4.077023029327393
+    },
+    {
+      "id": "test/20467.png",
+      "label": 0,
+      "score": 3.4767708778381348
+    },
+    {
+      "id": "test/20468.png",
+      "label": 0,
+      "score": 3.620035409927368
+    },
+    {
+      "id": "test/20469.png",
+      "label": 0,
+      "score": 3.5347838401794434
+    },
+    {
+      "id": "test/20470.png",
+      "label": 0,
+      "score": 3.3911232948303223
+    },
+    {
+      "id": "test/20471.png",
+      "label": 0,
+      "score": 3.9053163528442383
+    },
+    {
+      "id": "test/20472.png",
+      "label": 0,
+      "score": 3.7539782524108887
+    },
+    {
+      "id": "test/20473.png",
+      "label": 0,
+      "score": 4.525180816650391
+    },
+    {
+      "id": "test/20474.png",
+      "label": 0,
+      "score": 4.050885200500488
+    },
+    {
+      "id": "test/20475.png",
+      "label": 0,
+      "score": 4.679628849029541
+    },
+    {
+      "id": "test/20476.png",
+      "label": 0,
+      "score": 4.308610916137695
+    },
+    {
+      "id": "test/20477.png",
+      "label": 0,
+      "score": 3.92240047454834
+    },
+    {
+      "id": "test/20478.png",
+      "label": 0,
+      "score": 5.595714092254639
+    },
+    {
+      "id": "test/20479.png",
+      "label": 0,
+      "score": 3.988281011581421
+    },
+    {
+      "id": "test/20480.png",
+      "label": 0,
+      "score": 3.3676109313964844
+    },
+    {
+      "id": "test/20481.png",
+      "label": 0,
+      "score": 3.424494981765747
+    },
+    {
+      "id": "test/20482.png",
+      "label": 0,
+      "score": 3.541536808013916
+    },
+    {
+      "id": "test/20483.png",
+      "label": 0,
+      "score": 3.88608717918396
+    },
+    {
+      "id": "test/20484.png",
+      "label": 0,
+      "score": 3.7281031608581543
+    },
+    {
+      "id": "test/20485.png",
+      "label": 0,
+      "score": 3.596388339996338
+    },
+    {
+      "id": "test/20486.png",
+      "label": 1,
+      "score": 5.1370930671691895
+    },
+    {
+      "id": "test/20487.png",
+      "label": 1,
+      "score": 8.815943717956543
+    },
+    {
+      "id": "test/20488.png",
+      "label": 0,
+      "score": 3.8218700885772705
+    },
+    {
+      "id": "test/20489.png",
+      "label": 0,
+      "score": 3.653914451599121
+    },
+    {
+      "id": "test/20490.png",
+      "label": 0,
+      "score": 3.7562522888183594
+    },
+    {
+      "id": "test/20491.png",
+      "label": 0,
+      "score": 3.961479425430298
+    },
+    {
+      "id": "test/20492.png",
+      "label": 0,
+      "score": 5.224205017089844
+    },
+    {
+      "id": "test/20493.png",
+      "label": 0,
+      "score": 3.9377317428588867
+    },
+    {
+      "id": "test/20494.png",
+      "label": 0,
+      "score": 4.367238998413086
+    },
+    {
+      "id": "test/20495.png",
+      "label": 0,
+      "score": 3.6412739753723145
+    },
+    {
+      "id": "test/20496.png",
+      "label": 0,
+      "score": 3.962103843688965
+    },
+    {
+      "id": "test/20497.png",
+      "label": 0,
+      "score": 3.7301440238952637
+    },
+    {
+      "id": "test/20498.png",
+      "label": 0,
+      "score": 3.9295146465301514
+    },
+    {
+      "id": "test/20499.png",
+      "label": 0,
+      "score": 3.471951484680176
+    },
+    {
+      "id": "test/20500.png",
+      "label": 0,
+      "score": 3.4942543506622314
+    },
+    {
+      "id": "test/20501.png",
+      "label": 0,
+      "score": 3.702037811279297
+    },
+    {
+      "id": "test/20502.png",
+      "label": 1,
+      "score": 4.963129997253418
+    },
+    {
+      "id": "test/20503.png",
+      "label": 0,
+      "score": 4.134829044342041
+    },
+    {
+      "id": "test/20504.png",
+      "label": 0,
+      "score": 3.701706647872925
+    },
+    {
+      "id": "test/20505.png",
+      "label": 0,
+      "score": 4.0505805015563965
+    },
+    {
+      "id": "test/20506.png",
+      "label": 0,
+      "score": 3.9544429779052734
+    },
+    {
+      "id": "test/20507.png",
+      "label": 0,
+      "score": 3.7715606689453125
+    },
+    {
+      "id": "test/20508.png",
+      "label": 0,
+      "score": 4.541351318359375
+    },
+    {
+      "id": "test/20509.png",
+      "label": 0,
+      "score": 3.4368703365325928
+    },
+    {
+      "id": "test/20510.png",
+      "label": 0,
+      "score": 4.079070568084717
+    },
+    {
+      "id": "test/20511.png",
+      "label": 0,
+      "score": 4.489774703979492
+    },
+    {
+      "id": "test/20512.png",
+      "label": 0,
+      "score": 4.932541847229004
+    },
+    {
+      "id": "test/20513.png",
+      "label": 0,
+      "score": 4.058103084564209
+    },
+    {
+      "id": "test/20514.png",
+      "label": 0,
+      "score": 4.298078536987305
+    },
+    {
+      "id": "test/20515.png",
+      "label": 0,
+      "score": 3.5540685653686523
+    },
+    {
+      "id": "test/20516.png",
+      "label": 0,
+      "score": 4.822337627410889
+    },
+    {
+      "id": "test/20517.png",
+      "label": 1,
+      "score": 8.1231050491333
+    },
+    {
+      "id": "test/20518.png",
+      "label": 0,
+      "score": 4.052585601806641
+    },
+    {
+      "id": "test/20519.png",
+      "label": 0,
+      "score": 4.494422912597656
+    },
+    {
+      "id": "test/20520.png",
+      "label": 0,
+      "score": 3.6286208629608154
+    },
+    {
+      "id": "test/20521.png",
+      "label": 0,
+      "score": 3.9081175327301025
+    },
+    {
+      "id": "test/20522.png",
+      "label": 0,
+      "score": 3.713172674179077
+    },
+    {
+      "id": "test/20523.png",
+      "label": 1,
+      "score": 4.3608503341674805
+    },
+    {
+      "id": "test/20524.png",
+      "label": 0,
+      "score": 4.469838619232178
+    },
+    {
+      "id": "test/20525.png",
+      "label": 0,
+      "score": 3.6308391094207764
+    },
+    {
+      "id": "test/20526.png",
+      "label": 0,
+      "score": 3.623849868774414
+    },
+    {
+      "id": "test/20527.png",
+      "label": 0,
+      "score": 4.616303443908691
+    },
+    {
+      "id": "test/20528.png",
+      "label": 0,
+      "score": 4.205821990966797
+    },
+    {
+      "id": "test/20529.png",
+      "label": 0,
+      "score": 3.9530510902404785
+    },
+    {
+      "id": "test/20530.png",
+      "label": 0,
+      "score": 3.6320106983184814
+    },
+    {
+      "id": "test/20531.png",
+      "label": 0,
+      "score": 3.474189043045044
+    },
+    {
+      "id": "test/20532.png",
+      "label": 0,
+      "score": 3.844265937805176
+    },
+    {
+      "id": "test/20533.png",
+      "label": 0,
+      "score": 4.014404296875
+    },
+    {
+      "id": "test/20534.png",
+      "label": 0,
+      "score": 3.693000555038452
+    },
+    {
+      "id": "test/20535.png",
+      "label": 1,
+      "score": 8.52852725982666
+    },
+    {
+      "id": "test/20536.png",
+      "label": 0,
+      "score": 3.4221105575561523
+    },
+    {
+      "id": "test/20537.png",
+      "label": 0,
+      "score": 3.6927406787872314
+    },
+    {
+      "id": "test/20538.png",
+      "label": 0,
+      "score": 3.5496737957000732
+    },
+    {
+      "id": "test/20539.png",
+      "label": 0,
+      "score": 3.947657346725464
+    },
+    {
+      "id": "test/20540.png",
+      "label": 0,
+      "score": 4.174320220947266
+    },
+    {
+      "id": "test/20541.png",
+      "label": 0,
+      "score": 4.872535705566406
+    },
+    {
+      "id": "test/20542.png",
+      "label": 0,
+      "score": 3.5758087635040283
+    },
+    {
+      "id": "test/20543.png",
+      "label": 1,
+      "score": 6.294316291809082
+    },
+    {
+      "id": "test/20544.png",
+      "label": 1,
+      "score": 4.909038543701172
+    },
+    {
+      "id": "test/20545.png",
+      "label": 0,
+      "score": 3.8580942153930664
+    },
+    {
+      "id": "test/20546.png",
+      "label": 1,
+      "score": 5.2415666580200195
+    },
+    {
+      "id": "test/20547.png",
+      "label": 0,
+      "score": 3.59734845161438
+    },
+    {
+      "id": "test/20548.png",
+      "label": 0,
+      "score": 5.550862789154053
+    },
+    {
+      "id": "test/20549.png",
+      "label": 0,
+      "score": 4.5440263748168945
+    },
+    {
+      "id": "test/20550.png",
+      "label": 0,
+      "score": 3.636813163757324
+    },
+    {
+      "id": "test/20551.png",
+      "label": 0,
+      "score": 4.532630920410156
+    },
+    {
+      "id": "test/20552.png",
+      "label": 0,
+      "score": 5.22695779800415
+    },
+    {
+      "id": "test/20553.png",
+      "label": 0,
+      "score": 3.8859188556671143
+    },
+    {
+      "id": "test/20554.png",
+      "label": 0,
+      "score": 4.586887359619141
+    },
+    {
+      "id": "test/20555.png",
+      "label": 0,
+      "score": 3.882934331893921
+    },
+    {
+      "id": "test/20556.png",
+      "label": 0,
+      "score": 4.696683883666992
+    },
+    {
+      "id": "test/20557.png",
+      "label": 0,
+      "score": 3.7702555656433105
+    },
+    {
+      "id": "test/20558.png",
+      "label": 0,
+      "score": 3.556121826171875
+    },
+    {
+      "id": "test/20559.png",
+      "label": 0,
+      "score": 3.580293655395508
+    },
+    {
+      "id": "test/20560.png",
+      "label": 0,
+      "score": 3.485179901123047
+    },
+    {
+      "id": "test/20561.png",
+      "label": 1,
+      "score": 10.131342887878418
+    },
+    {
+      "id": "test/20562.png",
+      "label": 0,
+      "score": 4.05905818939209
+    },
+    {
+      "id": "test/20563.png",
+      "label": 0,
+      "score": 5.30569314956665
+    },
+    {
+      "id": "test/20564.png",
+      "label": 1,
+      "score": 4.362826824188232
+    },
+    {
+      "id": "test/20565.png",
+      "label": 0,
+      "score": 4.239572525024414
+    },
+    {
+      "id": "test/20566.png",
+      "label": 0,
+      "score": 3.7553770542144775
+    },
+    {
+      "id": "test/20567.png",
+      "label": 0,
+      "score": 3.691861152648926
+    },
+    {
+      "id": "test/20568.png",
+      "label": 0,
+      "score": 3.5377962589263916
+    },
+    {
+      "id": "test/20569.png",
+      "label": 0,
+      "score": 3.8465442657470703
+    },
+    {
+      "id": "test/20570.png",
+      "label": 0,
+      "score": 3.433666467666626
+    },
+    {
+      "id": "test/20571.png",
+      "label": 0,
+      "score": 3.4977481365203857
+    },
+    {
+      "id": "test/20572.png",
+      "label": 0,
+      "score": 4.109796047210693
+    },
+    {
+      "id": "test/20573.png",
+      "label": 0,
+      "score": 3.7824771404266357
+    },
+    {
+      "id": "test/20574.png",
+      "label": 0,
+      "score": 3.7692534923553467
+    },
+    {
+      "id": "test/20575.png",
+      "label": 0,
+      "score": 3.996694564819336
+    },
+    {
+      "id": "test/20576.png",
+      "label": 0,
+      "score": 3.9479713439941406
+    },
+    {
+      "id": "test/20577.png",
+      "label": 0,
+      "score": 3.824032783508301
+    },
+    {
+      "id": "test/20578.png",
+      "label": 0,
+      "score": 4.527073383331299
+    },
+    {
+      "id": "test/20579.png",
+      "label": 0,
+      "score": 3.8699913024902344
+    },
+    {
+      "id": "test/20580.png",
+      "label": 0,
+      "score": 5.100539207458496
+    },
+    {
+      "id": "test/20581.png",
+      "label": 0,
+      "score": 3.8672776222229004
+    },
+    {
+      "id": "test/20582.png",
+      "label": 0,
+      "score": 4.069863319396973
+    },
+    {
+      "id": "test/20583.png",
+      "label": 0,
+      "score": 5.360244274139404
+    },
+    {
+      "id": "test/20584.png",
+      "label": 0,
+      "score": 3.622311592102051
+    },
+    {
+      "id": "test/20585.png",
+      "label": 0,
+      "score": 3.793466091156006
+    },
+    {
+      "id": "test/20586.png",
+      "label": 0,
+      "score": 3.9175987243652344
+    },
+    {
+      "id": "test/20587.png",
+      "label": 1,
+      "score": 8.462577819824219
+    },
+    {
+      "id": "test/20588.png",
+      "label": 0,
+      "score": 3.252622127532959
+    },
+    {
+      "id": "test/20589.png",
+      "label": 0,
+      "score": 3.712271213531494
+    },
+    {
+      "id": "test/20590.png",
+      "label": 0,
+      "score": 3.7799015045166016
+    },
+    {
+      "id": "test/20591.png",
+      "label": 0,
+      "score": 4.254419803619385
+    },
+    {
+      "id": "test/20592.png",
+      "label": 0,
+      "score": 3.4271576404571533
+    },
+    {
+      "id": "test/20593.png",
+      "label": 0,
+      "score": 4.138988018035889
+    },
+    {
+      "id": "test/20594.png",
+      "label": 0,
+      "score": 4.2256083488464355
+    },
+    {
+      "id": "test/20595.png",
+      "label": 0,
+      "score": 4.290339946746826
+    },
+    {
+      "id": "test/20596.png",
+      "label": 0,
+      "score": 3.5741302967071533
+    },
+    {
+      "id": "test/20597.png",
+      "label": 0,
+      "score": 3.4944639205932617
+    },
+    {
+      "id": "test/20598.png",
+      "label": 0,
+      "score": 4.258351802825928
+    },
+    {
+      "id": "test/20599.png",
+      "label": 1,
+      "score": 9.270716667175293
+    },
+    {
+      "id": "test/20600.png",
+      "label": 1,
+      "score": 6.949243068695068
+    },
+    {
+      "id": "test/20601.png",
+      "label": 0,
+      "score": 4.4386186599731445
+    },
+    {
+      "id": "test/20602.png",
+      "label": 0,
+      "score": 3.6404402256011963
+    },
+    {
+      "id": "test/20603.png",
+      "label": 0,
+      "score": 3.6576147079467773
+    },
+    {
+      "id": "test/20604.png",
+      "label": 0,
+      "score": 3.7913973331451416
+    },
+    {
+      "id": "test/20605.png",
+      "label": 0,
+      "score": 3.534193992614746
+    },
+    {
+      "id": "test/20606.png",
+      "label": 0,
+      "score": 3.745105028152466
+    },
+    {
+      "id": "test/20607.png",
+      "label": 0,
+      "score": 3.1939096450805664
+    },
+    {
+      "id": "test/20608.png",
+      "label": 0,
+      "score": 3.648716688156128
+    },
+    {
+      "id": "test/20609.png",
+      "label": 0,
+      "score": 4.723336696624756
+    },
+    {
+      "id": "test/20610.png",
+      "label": 0,
+      "score": 3.6416475772857666
+    },
+    {
+      "id": "test/20611.png",
+      "label": 0,
+      "score": 3.4305946826934814
+    },
+    {
+      "id": "test/20612.png",
+      "label": 0,
+      "score": 3.8813109397888184
+    },
+    {
+      "id": "test/20613.png",
+      "label": 0,
+      "score": 4.3532633781433105
+    },
+    {
+      "id": "test/20614.png",
+      "label": 0,
+      "score": 3.7607216835021973
+    },
+    {
+      "id": "test/20615.png",
+      "label": 0,
+      "score": 3.59121036529541
+    },
+    {
+      "id": "test/20616.png",
+      "label": 0,
+      "score": 5.763763904571533
+    },
+    {
+      "id": "test/20617.png",
+      "label": 0,
+      "score": 4.897660732269287
+    },
+    {
+      "id": "test/20618.png",
+      "label": 0,
+      "score": 4.008279800415039
+    },
+    {
+      "id": "test/20619.png",
+      "label": 0,
+      "score": 4.224233150482178
+    },
+    {
+      "id": "test/20620.png",
+      "label": 0,
+      "score": 3.439598560333252
+    },
+    {
+      "id": "test/20621.png",
+      "label": 0,
+      "score": 3.4829812049865723
+    },
+    {
+      "id": "test/20622.png",
+      "label": 0,
+      "score": 4.356578350067139
+    },
+    {
+      "id": "test/20623.png",
+      "label": 0,
+      "score": 4.839591026306152
+    },
+    {
+      "id": "test/20624.png",
+      "label": 1,
+      "score": 4.537353038787842
+    },
+    {
+      "id": "test/20625.png",
+      "label": 1,
+      "score": 4.78152322769165
+    },
+    {
+      "id": "test/20626.png",
+      "label": 0,
+      "score": 3.567126750946045
+    },
+    {
+      "id": "test/20627.png",
+      "label": 0,
+      "score": 3.518251419067383
+    },
+    {
+      "id": "test/20628.png",
+      "label": 0,
+      "score": 3.49580979347229
+    },
+    {
+      "id": "test/20629.png",
+      "label": 0,
+      "score": 4.339382171630859
+    },
+    {
+      "id": "test/20630.png",
+      "label": 0,
+      "score": 4.7367024421691895
+    },
+    {
+      "id": "test/20631.png",
+      "label": 0,
+      "score": 3.8217058181762695
+    },
+    {
+      "id": "test/20632.png",
+      "label": 1,
+      "score": 5.214682579040527
+    },
+    {
+      "id": "test/20633.png",
+      "label": 0,
+      "score": 4.210186004638672
+    },
+    {
+      "id": "test/20634.png",
+      "label": 0,
+      "score": 3.456737518310547
+    },
+    {
+      "id": "test/20635.png",
+      "label": 0,
+      "score": 3.576495409011841
+    },
+    {
+      "id": "test/20636.png",
+      "label": 0,
+      "score": 3.342764139175415
+    },
+    {
+      "id": "test/20637.png",
+      "label": 0,
+      "score": 4.2950029373168945
+    },
+    {
+      "id": "test/20638.png",
+      "label": 0,
+      "score": 3.634690761566162
+    },
+    {
+      "id": "test/20639.png",
+      "label": 0,
+      "score": 3.5839593410491943
+    },
+    {
+      "id": "test/20640.png",
+      "label": 1,
+      "score": 3.838287830352783
+    },
+    {
+      "id": "test/20641.png",
+      "label": 0,
+      "score": 3.8830068111419678
+    },
+    {
+      "id": "test/20642.png",
+      "label": 0,
+      "score": 3.638049602508545
+    },
+    {
+      "id": "test/20643.png",
+      "label": 0,
+      "score": 4.328887462615967
+    },
+    {
+      "id": "test/20644.png",
+      "label": 0,
+      "score": 4.039299964904785
+    },
+    {
+      "id": "test/20645.png",
+      "label": 0,
+      "score": 4.208111763000488
+    },
+    {
+      "id": "test/20646.png",
+      "label": 1,
+      "score": 7.438266754150391
+    },
+    {
+      "id": "test/20647.png",
+      "label": 0,
+      "score": 4.854494094848633
+    },
+    {
+      "id": "test/20648.png",
+      "label": 0,
+      "score": 3.5270285606384277
+    },
+    {
+      "id": "test/20649.png",
+      "label": 0,
+      "score": 3.8726277351379395
+    },
+    {
+      "id": "test/20650.png",
+      "label": 0,
+      "score": 4.280947208404541
+    },
+    {
+      "id": "test/20651.png",
+      "label": 0,
+      "score": 4.347432613372803
+    },
+    {
+      "id": "test/20652.png",
+      "label": 0,
+      "score": 4.023043155670166
+    },
+    {
+      "id": "test/20653.png",
+      "label": 0,
+      "score": 3.933767080307007
+    },
+    {
+      "id": "test/20654.png",
+      "label": 0,
+      "score": 3.591904640197754
+    },
+    {
+      "id": "test/20655.png",
+      "label": 0,
+      "score": 3.5890533924102783
+    },
+    {
+      "id": "test/20656.png",
+      "label": 0,
+      "score": 3.593385696411133
+    },
+    {
+      "id": "test/20657.png",
+      "label": 0,
+      "score": 4.291138648986816
+    },
+    {
+      "id": "test/20658.png",
+      "label": 0,
+      "score": 4.041372299194336
+    },
+    {
+      "id": "test/20659.png",
+      "label": 0,
+      "score": 3.8254213333129883
+    },
+    {
+      "id": "test/20660.png",
+      "label": 1,
+      "score": 8.189942359924316
+    },
+    {
+      "id": "test/20661.png",
+      "label": 0,
+      "score": 3.567915201187134
+    },
+    {
+      "id": "test/20662.png",
+      "label": 0,
+      "score": 3.941499710083008
+    },
+    {
+      "id": "test/20663.png",
+      "label": 0,
+      "score": 6.8941650390625
+    },
+    {
+      "id": "test/20664.png",
+      "label": 0,
+      "score": 3.954385995864868
+    },
+    {
+      "id": "test/20665.png",
+      "label": 1,
+      "score": 6.505741119384766
+    },
+    {
+      "id": "test/20666.png",
+      "label": 0,
+      "score": 3.5712966918945312
+    },
+    {
+      "id": "test/20667.png",
+      "label": 1,
+      "score": 6.056863784790039
+    },
+    {
+      "id": "test/20668.png",
+      "label": 0,
+      "score": 4.085517406463623
+    },
+    {
+      "id": "test/20669.png",
+      "label": 1,
+      "score": 7.209329605102539
+    },
+    {
+      "id": "test/20670.png",
+      "label": 0,
+      "score": 3.6243109703063965
+    },
+    {
+      "id": "test/20671.png",
+      "label": 1,
+      "score": 5.45159912109375
+    },
+    {
+      "id": "test/20672.png",
+      "label": 1,
+      "score": 7.003779888153076
+    },
+    {
+      "id": "test/20673.png",
+      "label": 0,
+      "score": 3.927957057952881
+    },
+    {
+      "id": "test/20674.png",
+      "label": 0,
+      "score": 3.9987599849700928
+    },
+    {
+      "id": "test/20675.png",
+      "label": 0,
+      "score": 3.6359846591949463
+    },
+    {
+      "id": "test/20676.png",
+      "label": 0,
+      "score": 4.000545024871826
+    },
+    {
+      "id": "test/20677.png",
+      "label": 0,
+      "score": 4.621704578399658
+    },
+    {
+      "id": "test/20678.png",
+      "label": 0,
+      "score": 3.408154249191284
+    },
+    {
+      "id": "test/20679.png",
+      "label": 0,
+      "score": 4.148159980773926
+    },
+    {
+      "id": "test/20680.png",
+      "label": 0,
+      "score": 4.082971572875977
+    },
+    {
+      "id": "test/20681.png",
+      "label": 0,
+      "score": 4.090829849243164
+    },
+    {
+      "id": "test/20682.png",
+      "label": 1,
+      "score": 5.856690406799316
+    },
+    {
+      "id": "test/20683.png",
+      "label": 0,
+      "score": 3.6963934898376465
+    },
+    {
+      "id": "test/20684.png",
+      "label": 0,
+      "score": 3.8757100105285645
+    },
+    {
+      "id": "test/20685.png",
+      "label": 1,
+      "score": 6.2590837478637695
+    },
+    {
+      "id": "test/20686.png",
+      "label": 0,
+      "score": 3.6070642471313477
+    },
+    {
+      "id": "test/20687.png",
+      "label": 0,
+      "score": 4.1667680740356445
+    },
+    {
+      "id": "test/20688.png",
+      "label": 0,
+      "score": 3.5969765186309814
+    },
+    {
+      "id": "test/20689.png",
+      "label": 0,
+      "score": 4.032749176025391
+    },
+    {
+      "id": "test/20690.png",
+      "label": 0,
+      "score": 3.783216953277588
+    },
+    {
+      "id": "test/20691.png",
+      "label": 0,
+      "score": 3.699587106704712
+    },
+    {
+      "id": "test/20692.png",
+      "label": 0,
+      "score": 3.861717939376831
+    },
+    {
+      "id": "test/20693.png",
+      "label": 0,
+      "score": 4.55971622467041
+    },
+    {
+      "id": "test/20694.png",
+      "label": 0,
+      "score": 3.878998041152954
+    },
+    {
+      "id": "test/20695.png",
+      "label": 0,
+      "score": 4.236415863037109
+    },
+    {
+      "id": "test/20696.png",
+      "label": 0,
+      "score": 4.135801792144775
+    },
+    {
+      "id": "test/20697.png",
+      "label": 0,
+      "score": 4.133295059204102
+    },
+    {
+      "id": "test/20698.png",
+      "label": 0,
+      "score": 3.8090338706970215
+    },
+    {
+      "id": "test/20699.png",
+      "label": 0,
+      "score": 4.245114326477051
+    },
+    {
+      "id": "test/20700.png",
+      "label": 0,
+      "score": 3.9192585945129395
+    },
+    {
+      "id": "test/20701.png",
+      "label": 0,
+      "score": 4.149247646331787
+    },
+    {
+      "id": "test/20702.png",
+      "label": 0,
+      "score": 3.7163445949554443
+    },
+    {
+      "id": "test/20703.png",
+      "label": 0,
+      "score": 3.8053553104400635
+    },
+    {
+      "id": "test/20704.png",
+      "label": 0,
+      "score": 3.4960803985595703
+    },
+    {
+      "id": "test/20705.png",
+      "label": 0,
+      "score": 3.3030319213867188
+    },
+    {
+      "id": "test/20706.png",
+      "label": 0,
+      "score": 4.299765110015869
+    },
+    {
+      "id": "test/20707.png",
+      "label": 0,
+      "score": 3.839078903198242
+    },
+    {
+      "id": "test/20708.png",
+      "label": 0,
+      "score": 3.953845739364624
+    },
+    {
+      "id": "test/20709.png",
+      "label": 0,
+      "score": 3.809093475341797
+    },
+    {
+      "id": "test/20710.png",
+      "label": 0,
+      "score": 4.320838451385498
+    },
+    {
+      "id": "test/20711.png",
+      "label": 0,
+      "score": 6.438678741455078
+    },
+    {
+      "id": "test/20712.png",
+      "label": 0,
+      "score": 3.8830244541168213
+    },
+    {
+      "id": "test/20713.png",
+      "label": 0,
+      "score": 4.007798194885254
+    },
+    {
+      "id": "test/20714.png",
+      "label": 0,
+      "score": 4.55109167098999
+    },
+    {
+      "id": "test/20715.png",
+      "label": 0,
+      "score": 3.738718032836914
+    },
+    {
+      "id": "test/20716.png",
+      "label": 0,
+      "score": 4.150475978851318
+    },
+    {
+      "id": "test/20717.png",
+      "label": 0,
+      "score": 4.129298686981201
+    },
+    {
+      "id": "test/20718.png",
+      "label": 0,
+      "score": 3.8135342597961426
+    },
+    {
+      "id": "test/20719.png",
+      "label": 0,
+      "score": 4.803171634674072
+    },
+    {
+      "id": "test/20720.png",
+      "label": 0,
+      "score": 3.4776954650878906
+    },
+    {
+      "id": "test/20721.png",
+      "label": 0,
+      "score": 3.205406427383423
+    },
+    {
+      "id": "test/20722.png",
+      "label": 0,
+      "score": 3.858541250228882
+    },
+    {
+      "id": "test/20723.png",
+      "label": 0,
+      "score": 4.40601110458374
+    },
+    {
+      "id": "test/20724.png",
+      "label": 1,
+      "score": 5.706130027770996
+    },
+    {
+      "id": "test/20725.png",
+      "label": 0,
+      "score": 4.445517063140869
+    },
+    {
+      "id": "test/20726.png",
+      "label": 0,
+      "score": 4.137596130371094
+    },
+    {
+      "id": "test/20727.png",
+      "label": 0,
+      "score": 3.3744397163391113
+    },
+    {
+      "id": "test/20728.png",
+      "label": 0,
+      "score": 4.1536078453063965
+    },
+    {
+      "id": "test/20729.png",
+      "label": 0,
+      "score": 3.676093578338623
+    },
+    {
+      "id": "test/20730.png",
+      "label": 0,
+      "score": 3.8781771659851074
+    },
+    {
+      "id": "test/20731.png",
+      "label": 0,
+      "score": 3.8254992961883545
+    },
+    {
+      "id": "test/20732.png",
+      "label": 0,
+      "score": 4.138861656188965
+    },
+    {
+      "id": "test/20733.png",
+      "label": 0,
+      "score": 3.5628204345703125
+    },
+    {
+      "id": "test/20734.png",
+      "label": 0,
+      "score": 3.684652328491211
+    },
+    {
+      "id": "test/20735.png",
+      "label": 0,
+      "score": 4.430316925048828
+    },
+    {
+      "id": "test/20736.png",
+      "label": 0,
+      "score": 3.538118362426758
+    },
+    {
+      "id": "test/20737.png",
+      "label": 0,
+      "score": 3.673936128616333
+    },
+    {
+      "id": "test/20738.png",
+      "label": 1,
+      "score": 8.253541946411133
+    },
+    {
+      "id": "test/20739.png",
+      "label": 0,
+      "score": 4.263427257537842
+    },
+    {
+      "id": "test/20740.png",
+      "label": 0,
+      "score": 3.848468542098999
+    },
+    {
+      "id": "test/20741.png",
+      "label": 0,
+      "score": 3.6143596172332764
+    },
+    {
+      "id": "test/20742.png",
+      "label": 0,
+      "score": 3.3504769802093506
+    },
+    {
+      "id": "test/20743.png",
+      "label": 0,
+      "score": 4.112560749053955
+    },
+    {
+      "id": "test/20744.png",
+      "label": 1,
+      "score": 4.1944355964660645
+    },
+    {
+      "id": "test/20745.png",
+      "label": 0,
+      "score": 4.823896408081055
+    },
+    {
+      "id": "test/20746.png",
+      "label": 0,
+      "score": 3.8941490650177
+    },
+    {
+      "id": "test/20747.png",
+      "label": 1,
+      "score": 4.541662693023682
+    },
+    {
+      "id": "test/20748.png",
+      "label": 0,
+      "score": 3.7624382972717285
+    },
+    {
+      "id": "test/20749.png",
+      "label": 0,
+      "score": 3.803278923034668
+    },
+    {
+      "id": "test/20750.png",
+      "label": 0,
+      "score": 3.9062094688415527
+    },
+    {
+      "id": "test/20751.png",
+      "label": 0,
+      "score": 3.606062650680542
+    },
+    {
+      "id": "test/20752.png",
+      "label": 0,
+      "score": 4.316986560821533
+    },
+    {
+      "id": "test/20753.png",
+      "label": 0,
+      "score": 3.771000862121582
+    },
+    {
+      "id": "test/20754.png",
+      "label": 1,
+      "score": 4.217940330505371
+    },
+    {
+      "id": "test/20755.png",
+      "label": 0,
+      "score": 3.5799551010131836
+    },
+    {
+      "id": "test/20756.png",
+      "label": 0,
+      "score": 4.556640625
+    },
+    {
+      "id": "test/20757.png",
+      "label": 0,
+      "score": 3.9433231353759766
+    },
+    {
+      "id": "test/20758.png",
+      "label": 0,
+      "score": 3.753772497177124
+    },
+    {
+      "id": "test/20759.png",
+      "label": 0,
+      "score": 4.701240539550781
+    },
+    {
+      "id": "test/20760.png",
+      "label": 0,
+      "score": 3.554654121398926
+    },
+    {
+      "id": "test/20761.png",
+      "label": 0,
+      "score": 4.31639289855957
+    },
+    {
+      "id": "test/20762.png",
+      "label": 0,
+      "score": 3.660468578338623
+    },
+    {
+      "id": "test/20763.png",
+      "label": 0,
+      "score": 3.677816390991211
+    },
+    {
+      "id": "test/20764.png",
+      "label": 0,
+      "score": 3.8629953861236572
+    },
+    {
+      "id": "test/20765.png",
+      "label": 1,
+      "score": 6.419604778289795
+    },
+    {
+      "id": "test/20766.png",
+      "label": 0,
+      "score": 3.8363091945648193
+    },
+    {
+      "id": "test/20767.png",
+      "label": 0,
+      "score": 4.145837306976318
+    },
+    {
+      "id": "test/20768.png",
+      "label": 0,
+      "score": 4.84200382232666
+    },
+    {
+      "id": "test/20769.png",
+      "label": 0,
+      "score": 4.1244001388549805
+    },
+    {
+      "id": "test/20770.png",
+      "label": 0,
+      "score": 3.92256236076355
+    },
+    {
+      "id": "test/20771.png",
+      "label": 0,
+      "score": 3.634927988052368
+    },
+    {
+      "id": "test/20772.png",
+      "label": 1,
+      "score": 4.048000812530518
+    },
+    {
+      "id": "test/20773.png",
+      "label": 0,
+      "score": 3.5717477798461914
+    },
+    {
+      "id": "test/20774.png",
+      "label": 0,
+      "score": 3.7680039405822754
+    },
+    {
+      "id": "test/20775.png",
+      "label": 0,
+      "score": 3.6506166458129883
+    },
+    {
+      "id": "test/20776.png",
+      "label": 0,
+      "score": 3.5379817485809326
+    },
+    {
+      "id": "test/20777.png",
+      "label": 0,
+      "score": 3.4762613773345947
+    },
+    {
+      "id": "test/20778.png",
+      "label": 0,
+      "score": 3.6141738891601562
+    },
+    {
+      "id": "test/20779.png",
+      "label": 0,
+      "score": 4.542810916900635
+    },
+    {
+      "id": "test/20780.png",
+      "label": 0,
+      "score": 3.9900083541870117
+    },
+    {
+      "id": "test/20781.png",
+      "label": 0,
+      "score": 3.351585626602173
+    },
+    {
+      "id": "test/20782.png",
+      "label": 0,
+      "score": 3.929489850997925
+    },
+    {
+      "id": "test/20783.png",
+      "label": 0,
+      "score": 3.8408432006835938
+    },
+    {
+      "id": "test/20784.png",
+      "label": 1,
+      "score": 6.692946910858154
+    },
+    {
+      "id": "test/20785.png",
+      "label": 1,
+      "score": 7.960013389587402
+    },
+    {
+      "id": "test/20786.png",
+      "label": 0,
+      "score": 4.128877639770508
+    },
+    {
+      "id": "test/20787.png",
+      "label": 0,
+      "score": 3.9479358196258545
+    },
+    {
+      "id": "test/20788.png",
+      "label": 0,
+      "score": 3.9408345222473145
+    },
+    {
+      "id": "test/20789.png",
+      "label": 0,
+      "score": 4.180637359619141
+    },
+    {
+      "id": "test/20790.png",
+      "label": 0,
+      "score": 3.739690065383911
+    },
+    {
+      "id": "test/20791.png",
+      "label": 0,
+      "score": 3.645648956298828
+    },
+    {
+      "id": "test/20792.png",
+      "label": 0,
+      "score": 3.943211555480957
+    },
+    {
+      "id": "test/20793.png",
+      "label": 0,
+      "score": 4.327589988708496
+    },
+    {
+      "id": "test/20794.png",
+      "label": 0,
+      "score": 3.589229106903076
+    },
+    {
+      "id": "test/20795.png",
+      "label": 0,
+      "score": 3.4259698390960693
+    },
+    {
+      "id": "test/20796.png",
+      "label": 0,
+      "score": 3.494755983352661
+    },
+    {
+      "id": "test/20797.png",
+      "label": 0,
+      "score": 3.717714548110962
+    },
+    {
+      "id": "test/20798.png",
+      "label": 0,
+      "score": 4.223455905914307
+    },
+    {
+      "id": "test/20799.png",
+      "label": 0,
+      "score": 3.5846869945526123
+    },
+    {
+      "id": "test/20800.png",
+      "label": 0,
+      "score": 4.541504383087158
+    },
+    {
+      "id": "test/20801.png",
+      "label": 1,
+      "score": 4.046638011932373
+    },
+    {
+      "id": "test/20802.png",
+      "label": 0,
+      "score": 3.4333455562591553
+    },
+    {
+      "id": "test/20803.png",
+      "label": 0,
+      "score": 3.557581901550293
+    },
+    {
+      "id": "test/20804.png",
+      "label": 1,
+      "score": 7.463919639587402
+    },
+    {
+      "id": "test/20805.png",
+      "label": 0,
+      "score": 4.265688896179199
+    },
+    {
+      "id": "test/20806.png",
+      "label": 0,
+      "score": 3.886106252670288
+    },
+    {
+      "id": "test/20807.png",
+      "label": 0,
+      "score": 3.7009596824645996
+    },
+    {
+      "id": "test/20808.png",
+      "label": 0,
+      "score": 4.21994161605835
+    },
+    {
+      "id": "test/20809.png",
+      "label": 0,
+      "score": 3.9441816806793213
+    },
+    {
+      "id": "test/20810.png",
+      "label": 0,
+      "score": 4.18733024597168
+    },
+    {
+      "id": "test/20811.png",
+      "label": 0,
+      "score": 4.832615852355957
+    },
+    {
+      "id": "test/20812.png",
+      "label": 0,
+      "score": 3.916867971420288
+    },
+    {
+      "id": "test/20813.png",
+      "label": 0,
+      "score": 3.8196346759796143
+    },
+    {
+      "id": "test/20814.png",
+      "label": 0,
+      "score": 4.22952127456665
+    },
+    {
+      "id": "test/20815.png",
+      "label": 0,
+      "score": 3.6708102226257324
+    },
+    {
+      "id": "test/20816.png",
+      "label": 1,
+      "score": 4.1408233642578125
+    },
+    {
+      "id": "test/20817.png",
+      "label": 0,
+      "score": 4.210272789001465
+    },
+    {
+      "id": "test/20818.png",
+      "label": 0,
+      "score": 3.493309259414673
+    },
+    {
+      "id": "test/20819.png",
+      "label": 0,
+      "score": 3.9319560527801514
+    },
+    {
+      "id": "test/20820.png",
+      "label": 0,
+      "score": 3.5274362564086914
+    },
+    {
+      "id": "test/20821.png",
+      "label": 1,
+      "score": 6.710006237030029
+    },
+    {
+      "id": "test/20822.png",
+      "label": 0,
+      "score": 3.6739606857299805
+    },
+    {
+      "id": "test/20823.png",
+      "label": 0,
+      "score": 4.225162029266357
+    },
+    {
+      "id": "test/20824.png",
+      "label": 0,
+      "score": 3.601539373397827
+    },
+    {
+      "id": "test/20825.png",
+      "label": 0,
+      "score": 4.1052565574646
+    },
+    {
+      "id": "test/20826.png",
+      "label": 0,
+      "score": 3.743913173675537
+    },
+    {
+      "id": "test/20827.png",
+      "label": 1,
+      "score": 7.713939666748047
+    },
+    {
+      "id": "test/20828.png",
+      "label": 0,
+      "score": 5.4423909187316895
+    },
+    {
+      "id": "test/20829.png",
+      "label": 1,
+      "score": 4.076240062713623
+    },
+    {
+      "id": "test/20830.png",
+      "label": 0,
+      "score": 4.234665870666504
+    },
+    {
+      "id": "test/20831.png",
+      "label": 0,
+      "score": 3.581995725631714
+    },
+    {
+      "id": "test/20832.png",
+      "label": 0,
+      "score": 4.492339134216309
+    },
+    {
+      "id": "test/20833.png",
+      "label": 0,
+      "score": 3.81646728515625
+    },
+    {
+      "id": "test/20834.png",
+      "label": 1,
+      "score": 10.4009428024292
+    },
+    {
+      "id": "test/20835.png",
+      "label": 0,
+      "score": 3.5915324687957764
+    },
+    {
+      "id": "test/20836.png",
+      "label": 0,
+      "score": 4.023831844329834
+    },
+    {
+      "id": "test/20837.png",
+      "label": 0,
+      "score": 4.400882244110107
+    },
+    {
+      "id": "test/20838.png",
+      "label": 0,
+      "score": 3.6289758682250977
+    },
+    {
+      "id": "test/20839.png",
+      "label": 0,
+      "score": 3.474853992462158
+    },
+    {
+      "id": "test/20840.png",
+      "label": 0,
+      "score": 3.723407745361328
+    },
+    {
+      "id": "test/20841.png",
+      "label": 0,
+      "score": 4.00621223449707
+    },
+    {
+      "id": "test/20842.png",
+      "label": 0,
+      "score": 3.8170745372772217
+    },
+    {
+      "id": "test/20843.png",
+      "label": 0,
+      "score": 4.648590087890625
+    },
+    {
+      "id": "test/20844.png",
+      "label": 0,
+      "score": 3.536914825439453
+    },
+    {
+      "id": "test/20845.png",
+      "label": 0,
+      "score": 3.8797335624694824
+    },
+    {
+      "id": "test/20846.png",
+      "label": 0,
+      "score": 4.696229457855225
+    },
+    {
+      "id": "test/20847.png",
+      "label": 0,
+      "score": 3.7418723106384277
+    },
+    {
+      "id": "test/20848.png",
+      "label": 1,
+      "score": 5.931386470794678
+    },
+    {
+      "id": "test/20849.png",
+      "label": 0,
+      "score": 3.994262218475342
+    },
+    {
+      "id": "test/20850.png",
+      "label": 0,
+      "score": 3.69685959815979
+    },
+    {
+      "id": "test/20851.png",
+      "label": 0,
+      "score": 3.677393674850464
+    },
+    {
+      "id": "test/20852.png",
+      "label": 0,
+      "score": 4.277213096618652
+    },
+    {
+      "id": "test/20853.png",
+      "label": 0,
+      "score": 3.791321277618408
+    },
+    {
+      "id": "test/20854.png",
+      "label": 0,
+      "score": 3.69317626953125
+    },
+    {
+      "id": "test/20855.png",
+      "label": 0,
+      "score": 3.43432354927063
+    },
+    {
+      "id": "test/20856.png",
+      "label": 0,
+      "score": 4.543015003204346
+    },
+    {
+      "id": "test/20857.png",
+      "label": 1,
+      "score": 6.801626682281494
+    },
+    {
+      "id": "test/20858.png",
+      "label": 0,
+      "score": 3.7809436321258545
+    },
+    {
+      "id": "test/20859.png",
+      "label": 0,
+      "score": 4.142624855041504
+    },
+    {
+      "id": "test/20860.png",
+      "label": 0,
+      "score": 3.701791763305664
+    },
+    {
+      "id": "test/20861.png",
+      "label": 0,
+      "score": 4.562163352966309
+    },
+    {
+      "id": "test/20862.png",
+      "label": 0,
+      "score": 5.8491902351379395
+    },
+    {
+      "id": "test/20863.png",
+      "label": 0,
+      "score": 4.219850540161133
+    },
+    {
+      "id": "test/20864.png",
+      "label": 0,
+      "score": 3.8469603061676025
+    },
+    {
+      "id": "test/20865.png",
+      "label": 0,
+      "score": 4.6926188468933105
+    },
+    {
+      "id": "test/20866.png",
+      "label": 0,
+      "score": 4.769773006439209
+    },
+    {
+      "id": "test/20867.png",
+      "label": 0,
+      "score": 3.7733190059661865
+    },
+    {
+      "id": "test/20868.png",
+      "label": 0,
+      "score": 3.8425369262695312
+    },
+    {
+      "id": "test/20869.png",
+      "label": 0,
+      "score": 3.910141944885254
+    },
+    {
+      "id": "test/20870.png",
+      "label": 1,
+      "score": 5.55587100982666
+    },
+    {
+      "id": "test/20871.png",
+      "label": 0,
+      "score": 3.7939510345458984
+    },
+    {
+      "id": "test/20872.png",
+      "label": 0,
+      "score": 4.900685787200928
+    },
+    {
+      "id": "test/20873.png",
+      "label": 0,
+      "score": 3.349271774291992
+    },
+    {
+      "id": "test/20874.png",
+      "label": 0,
+      "score": 3.7082149982452393
+    },
+    {
+      "id": "test/20875.png",
+      "label": 0,
+      "score": 3.868213176727295
+    },
+    {
+      "id": "test/20876.png",
+      "label": 0,
+      "score": 3.852959156036377
+    },
+    {
+      "id": "test/20877.png",
+      "label": 0,
+      "score": 3.3969082832336426
+    },
+    {
+      "id": "test/20878.png",
+      "label": 0,
+      "score": 3.7122700214385986
+    },
+    {
+      "id": "test/20879.png",
+      "label": 0,
+      "score": 5.381062984466553
+    },
+    {
+      "id": "test/20880.png",
+      "label": 0,
+      "score": 4.180306434631348
+    },
+    {
+      "id": "test/20881.png",
+      "label": 1,
+      "score": 5.672956466674805
+    },
+    {
+      "id": "test/20882.png",
+      "label": 1,
+      "score": 8.79466438293457
+    },
+    {
+      "id": "test/20883.png",
+      "label": 0,
+      "score": 3.6273062229156494
+    },
+    {
+      "id": "test/20884.png",
+      "label": 1,
+      "score": 6.710052013397217
+    },
+    {
+      "id": "test/20885.png",
+      "label": 0,
+      "score": 4.866850852966309
+    },
+    {
+      "id": "test/20886.png",
+      "label": 0,
+      "score": 3.606340169906616
+    },
+    {
+      "id": "test/20887.png",
+      "label": 0,
+      "score": 4.240352153778076
+    },
+    {
+      "id": "test/20888.png",
+      "label": 0,
+      "score": 4.210402965545654
+    },
+    {
+      "id": "test/20889.png",
+      "label": 0,
+      "score": 3.7299678325653076
+    },
+    {
+      "id": "test/20890.png",
+      "label": 0,
+      "score": 3.624235153198242
+    },
+    {
+      "id": "test/20891.png",
+      "label": 1,
+      "score": 8.469327926635742
+    },
+    {
+      "id": "test/20892.png",
+      "label": 1,
+      "score": 7.073784351348877
+    },
+    {
+      "id": "test/20893.png",
+      "label": 0,
+      "score": 3.451449394226074
+    },
+    {
+      "id": "test/20894.png",
+      "label": 0,
+      "score": 3.9403727054595947
+    },
+    {
+      "id": "test/20895.png",
+      "label": 1,
+      "score": 5.294589996337891
+    },
+    {
+      "id": "test/20896.png",
+      "label": 0,
+      "score": 4.242496967315674
+    },
+    {
+      "id": "test/20897.png",
+      "label": 0,
+      "score": 3.9834744930267334
+    },
+    {
+      "id": "test/20898.png",
+      "label": 0,
+      "score": 3.7460289001464844
+    },
+    {
+      "id": "test/20899.png",
+      "label": 0,
+      "score": 3.8572757244110107
+    },
+    {
+      "id": "test/20900.png",
+      "label": 0,
+      "score": 3.4385926723480225
+    },
+    {
+      "id": "test/20901.png",
+      "label": 0,
+      "score": 3.357314109802246
+    },
+    {
+      "id": "test/20902.png",
+      "label": 1,
+      "score": 7.802593231201172
+    },
+    {
+      "id": "test/20903.png",
+      "label": 0,
+      "score": 3.9357492923736572
+    },
+    {
+      "id": "test/20904.png",
+      "label": 0,
+      "score": 3.9843125343322754
+    },
+    {
+      "id": "test/20905.png",
+      "label": 0,
+      "score": 4.209840297698975
+    },
+    {
+      "id": "test/20906.png",
+      "label": 0,
+      "score": 4.029722213745117
+    },
+    {
+      "id": "test/20907.png",
+      "label": 0,
+      "score": 5.044893741607666
+    },
+    {
+      "id": "test/20908.png",
+      "label": 0,
+      "score": 4.0491485595703125
+    },
+    {
+      "id": "test/20909.png",
+      "label": 0,
+      "score": 3.9060206413269043
+    },
+    {
+      "id": "test/20910.png",
+      "label": 0,
+      "score": 3.8056082725524902
+    },
+    {
+      "id": "test/20911.png",
+      "label": 0,
+      "score": 4.410037517547607
+    },
+    {
+      "id": "test/20912.png",
+      "label": 1,
+      "score": 5.993920803070068
+    },
+    {
+      "id": "test/20913.png",
+      "label": 0,
+      "score": 3.74135684967041
+    },
+    {
+      "id": "test/20914.png",
+      "label": 0,
+      "score": 4.430413722991943
+    },
+    {
+      "id": "test/20915.png",
+      "label": 0,
+      "score": 3.946033239364624
+    },
+    {
+      "id": "test/20916.png",
+      "label": 0,
+      "score": 4.244434833526611
+    },
+    {
+      "id": "test/20917.png",
+      "label": 0,
+      "score": 3.667498826980591
+    },
+    {
+      "id": "test/20918.png",
+      "label": 0,
+      "score": 3.5768308639526367
+    },
+    {
+      "id": "test/20919.png",
+      "label": 0,
+      "score": 3.525075912475586
+    },
+    {
+      "id": "test/20920.png",
+      "label": 0,
+      "score": 3.677109956741333
+    },
+    {
+      "id": "test/20921.png",
+      "label": 0,
+      "score": 3.352388381958008
+    },
+    {
+      "id": "test/20922.png",
+      "label": 1,
+      "score": 7.301031112670898
+    },
+    {
+      "id": "test/20923.png",
+      "label": 0,
+      "score": 3.8121755123138428
+    },
+    {
+      "id": "test/20924.png",
+      "label": 0,
+      "score": 3.9191157817840576
+    },
+    {
+      "id": "test/20925.png",
+      "label": 0,
+      "score": 3.670879364013672
+    },
+    {
+      "id": "test/20926.png",
+      "label": 0,
+      "score": 4.435040473937988
+    },
+    {
+      "id": "test/20927.png",
+      "label": 0,
+      "score": 3.625668525695801
+    },
+    {
+      "id": "test/20928.png",
+      "label": 0,
+      "score": 3.9039559364318848
+    },
+    {
+      "id": "test/20929.png",
+      "label": 0,
+      "score": 3.543966770172119
+    },
+    {
+      "id": "test/20930.png",
+      "label": 0,
+      "score": 3.9333722591400146
+    },
+    {
+      "id": "test/20931.png",
+      "label": 0,
+      "score": 3.5877463817596436
+    },
+    {
+      "id": "test/20932.png",
+      "label": 0,
+      "score": 3.948775291442871
+    },
+    {
+      "id": "test/20933.png",
+      "label": 0,
+      "score": 3.524846076965332
+    },
+    {
+      "id": "test/20934.png",
+      "label": 0,
+      "score": 3.7253410816192627
+    },
+    {
+      "id": "test/20935.png",
+      "label": 0,
+      "score": 3.993138313293457
+    },
+    {
+      "id": "test/20936.png",
+      "label": 0,
+      "score": 3.7752017974853516
+    },
+    {
+      "id": "test/20937.png",
+      "label": 0,
+      "score": 3.9597699642181396
+    },
+    {
+      "id": "test/20938.png",
+      "label": 0,
+      "score": 3.554527521133423
+    },
+    {
+      "id": "test/20939.png",
+      "label": 0,
+      "score": 3.7783846855163574
+    },
+    {
+      "id": "test/20940.png",
+      "label": 0,
+      "score": 4.187324523925781
+    },
+    {
+      "id": "test/20941.png",
+      "label": 1,
+      "score": 5.612760543823242
+    },
+    {
+      "id": "test/20942.png",
+      "label": 1,
+      "score": 5.2742743492126465
+    },
+    {
+      "id": "test/20943.png",
+      "label": 0,
+      "score": 3.5900719165802
+    },
+    {
+      "id": "test/20944.png",
+      "label": 0,
+      "score": 4.231016635894775
+    },
+    {
+      "id": "test/20945.png",
+      "label": 0,
+      "score": 3.6675562858581543
+    },
+    {
+      "id": "test/20946.png",
+      "label": 0,
+      "score": 4.552844047546387
+    },
+    {
+      "id": "test/20947.png",
+      "label": 0,
+      "score": 3.7447433471679688
+    },
+    {
+      "id": "test/20948.png",
+      "label": 0,
+      "score": 4.6746697425842285
+    },
+    {
+      "id": "test/20949.png",
+      "label": 0,
+      "score": 3.5830819606781006
+    },
+    {
+      "id": "test/20950.png",
+      "label": 0,
+      "score": 3.8681271076202393
+    },
+    {
+      "id": "test/20951.png",
+      "label": 0,
+      "score": 3.4259867668151855
+    },
+    {
+      "id": "test/20952.png",
+      "label": 1,
+      "score": 6.032863616943359
+    },
+    {
+      "id": "test/20953.png",
+      "label": 0,
+      "score": 3.8517544269561768
+    },
+    {
+      "id": "test/20954.png",
+      "label": 0,
+      "score": 4.110311031341553
+    },
+    {
+      "id": "test/20955.png",
+      "label": 0,
+      "score": 4.310697555541992
+    },
+    {
+      "id": "test/20956.png",
+      "label": 1,
+      "score": 7.736898422241211
+    },
+    {
+      "id": "test/20957.png",
+      "label": 0,
+      "score": 3.3757526874542236
+    },
+    {
+      "id": "test/20958.png",
+      "label": 0,
+      "score": 4.728516578674316
+    },
+    {
+      "id": "test/20959.png",
+      "label": 1,
+      "score": 6.28583288192749
+    },
+    {
+      "id": "test/20960.png",
+      "label": 0,
+      "score": 3.609971284866333
+    },
+    {
+      "id": "test/20961.png",
+      "label": 0,
+      "score": 3.4962425231933594
+    },
+    {
+      "id": "test/20962.png",
+      "label": 0,
+      "score": 3.9906511306762695
+    },
+    {
+      "id": "test/20963.png",
+      "label": 0,
+      "score": 3.6018917560577393
+    },
+    {
+      "id": "test/20964.png",
+      "label": 0,
+      "score": 3.6263699531555176
+    },
+    {
+      "id": "test/20965.png",
+      "label": 0,
+      "score": 4.023112773895264
+    },
+    {
+      "id": "test/20966.png",
+      "label": 0,
+      "score": 3.617119312286377
+    },
+    {
+      "id": "test/20967.png",
+      "label": 0,
+      "score": 3.4632272720336914
+    },
+    {
+      "id": "test/20968.png",
+      "label": 0,
+      "score": 4.305233955383301
+    },
+    {
+      "id": "test/20969.png",
+      "label": 1,
+      "score": 3.873605728149414
+    },
+    {
+      "id": "test/20970.png",
+      "label": 0,
+      "score": 4.591141223907471
+    },
+    {
+      "id": "test/20971.png",
+      "label": 0,
+      "score": 3.673341751098633
+    },
+    {
+      "id": "test/20972.png",
+      "label": 0,
+      "score": 3.5853593349456787
+    },
+    {
+      "id": "test/20973.png",
+      "label": 0,
+      "score": 4.019638538360596
+    },
+    {
+      "id": "test/20974.png",
+      "label": 0,
+      "score": 4.034153938293457
+    },
+    {
+      "id": "test/20975.png",
+      "label": 0,
+      "score": 3.841035842895508
+    },
+    {
+      "id": "test/20976.png",
+      "label": 0,
+      "score": 3.564438819885254
+    },
+    {
+      "id": "test/20977.png",
+      "label": 0,
+      "score": 3.985936403274536
+    },
+    {
+      "id": "test/20978.png",
+      "label": 0,
+      "score": 3.881352186203003
+    },
+    {
+      "id": "test/20979.png",
+      "label": 0,
+      "score": 4.71578311920166
+    },
+    {
+      "id": "test/20980.png",
+      "label": 0,
+      "score": 3.677738904953003
+    },
+    {
+      "id": "test/20981.png",
+      "label": 0,
+      "score": 3.7803537845611572
+    },
+    {
+      "id": "test/20982.png",
+      "label": 0,
+      "score": 3.9832725524902344
+    },
+    {
+      "id": "test/20983.png",
+      "label": 0,
+      "score": 3.8619468212127686
+    },
+    {
+      "id": "test/20984.png",
+      "label": 0,
+      "score": 3.4865825176239014
+    },
+    {
+      "id": "test/20985.png",
+      "label": 0,
+      "score": 3.6445512771606445
+    },
+    {
+      "id": "test/20986.png",
+      "label": 0,
+      "score": 3.419234037399292
+    },
+    {
+      "id": "test/20987.png",
+      "label": 0,
+      "score": 3.7317376136779785
+    },
+    {
+      "id": "test/20988.png",
+      "label": 0,
+      "score": 3.939488172531128
+    },
+    {
+      "id": "test/20989.png",
+      "label": 0,
+      "score": 4.092296600341797
+    },
+    {
+      "id": "test/20990.png",
+      "label": 0,
+      "score": 3.849137783050537
+    },
+    {
+      "id": "test/20991.png",
+      "label": 0,
+      "score": 3.8201889991760254
+    },
+    {
+      "id": "test/20992.png",
+      "label": 0,
+      "score": 4.03098201751709
+    },
+    {
+      "id": "test/20993.png",
+      "label": 0,
+      "score": 4.760095596313477
+    },
+    {
+      "id": "test/20994.png",
+      "label": 0,
+      "score": 4.319712162017822
+    },
+    {
+      "id": "test/20995.png",
+      "label": 0,
+      "score": 3.927701473236084
+    },
+    {
+      "id": "test/20996.png",
+      "label": 0,
+      "score": 3.536777973175049
+    },
+    {
+      "id": "test/20997.png",
+      "label": 0,
+      "score": 3.770700216293335
+    },
+    {
+      "id": "test/20998.png",
+      "label": 0,
+      "score": 3.867966890335083
+    },
+    {
+      "id": "test/20999.png",
+      "label": 0,
+      "score": 4.171420574188232
+    },
+    {
+      "id": "test/21000.png",
+      "label": 0,
+      "score": 4.626068115234375
+    },
+    {
+      "id": "test/21001.png",
+      "label": 0,
+      "score": 4.009957313537598
+    },
+    {
+      "id": "test/21002.png",
+      "label": 0,
+      "score": 3.6801135540008545
+    },
+    {
+      "id": "test/21003.png",
+      "label": 0,
+      "score": 3.5852763652801514
+    }
+  ],
+  "dataset_manifest": {
+    "source": "https://data.vicos.si/datasets/KSDD/KolektorSDD2.zip",
+    "homepage": "https://www.vicos.si/resources/kolektorsdd2/",
+    "license": "CC BY-NC-SA 4.0",
+    "archive_sha256": "edcdb486809b24f1d17b785e30c52fafc5999554dd5fe18ddf77b61ceb6f36a8"
+  },
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1"
+  },
+  "limits": "Official train/test partition, stratified image-level validation. Physical-item grouping unavailable; no general manufacturing or out-of-domain accuracy claim.",
+  "data_quality": {
+    "verified_duplicate_copy_pairs_excluded": 1,
+    "exact_image_duplicates_after_exclusion": 0
+  },
+  "deployment_validation": {
+    "runtime": "ONNX Runtime CPU",
+    "images": 1004,
+    "max_absolute_score_difference": 5.392303466811299e-05,
+    "mean_absolute_score_difference": 2.553183870961267e-05,
+    "map_comparison_images": 4,
+    "max_absolute_map_difference": 7.867813110351562e-06,
+    "tolerance": 0.002,
+    "test": {
+      "images": 1004,
+      "positive_images": 110,
+      "auroc": 0.9379753914988815,
+      "average_precision": 0.8127364175378781,
+      "precision": 0.7477477477477478,
+      "recall": 0.7545454545454545,
+      "f1": 0.751131221719457,
+      "confusion": {
+        "true_negative": 866,
+        "false_positive": 28,
+        "false_negative": 27,
+        "true_positive": 83
+      }
+    },
+    "inference_ms": {
+      "mean": 15.691673306772907,
+      "p95": 16.1285,
+      "scope": "Single-image preprocessing, ONNX encoder and score-map generation; excludes IO/API"
+    },
+    "passed": true,
+    "runtime_version": "1.31.1"
+  }
+}

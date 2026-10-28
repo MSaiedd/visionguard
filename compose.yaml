@@ -1,0 +1,37 @@
+services:
+  app:
+    build: .
+    ports: ['127.0.0.1:8003:8000']
+    environment:
+      VISION_DATABASE_URL: postgresql+psycopg://visionguard:${VISION_POSTGRES_PASSWORD:?Set a fresh VISION_POSTGRES_PASSWORD}@postgres:5432/visionguard
+      VISION_DATA_DIR: /app/data/workspace
+      VISION_MODEL_DIR: /app/artifacts/surface-v1
+      VISION_AUTH_MODE: ${VISION_AUTH_MODE:-local}
+      VISION_ALLOWED_HOSTS: ${VISION_ALLOWED_HOSTS:-localhost,127.0.0.1}
+      VISION_LOCAL_CLIENT_NETWORKS: 127.0.0.0/8,::1/128,172.16.0.0/12
+      VISION_OIDC_ISSUER: ${VISION_OIDC_ISSUER:-}
+      VISION_OIDC_AUDIENCE: ${VISION_OIDC_AUDIENCE:-}
+      VISION_OIDC_JWKS_URL: ${VISION_OIDC_JWKS_URL:-}
+    volumes:
+      - app-data:/app/data
+      - ./artifacts:/app/artifacts:ro
+      - ./data/samples:/app/data/samples:ro
+    depends_on:
+      postgres: {condition: service_healthy}
+    restart: unless-stopped
+  postgres:
+    image: postgres:17.11
+    environment:
+      POSTGRES_USER: visionguard
+      POSTGRES_PASSWORD: ${VISION_POSTGRES_PASSWORD:?Set a fresh VISION_POSTGRES_PASSWORD}
+      POSTGRES_DB: visionguard
+    volumes: ['postgres-data:/var/lib/postgresql/data']
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U visionguard -d visionguard']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+volumes:
+  app-data:
+  postgres-data:
